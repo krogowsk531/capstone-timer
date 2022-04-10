@@ -24,12 +24,12 @@ public class UserController {
         return "index";
     }
 
-    @GetMapping("/showNewUserForm")
-    public String showNewUserForm(Model model) {
+    @GetMapping("/showActivityForm")
+    public String showActivityForm(Model model) {
         // create model attribute to bind form data
         User user = new User();
         model.addAttribute("user", user);
-        return "new_user";
+        return "new_activity";
     }
 
     @PostMapping("/saveUser")

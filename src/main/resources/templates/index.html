@@ -4,21 +4,15 @@
 <head>
     <meta charset="ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap">
     <title>Intention Timer</title>
-    <style>
-        body {
-            background-color: #2B2733;
-            min-width: 230px;
-        }
-    </style>
 </head>
 <body>
     <header>
         <h1>INTENTION TIMER</h1>
         <div class="dropdown">
-            <img class="icon ham-icon" src="assets/ham-menu.png" alt="hamburger menu"/>
+            <img class="icon ham-icon" src="/ham-menu.png" alt="hamburger menu"/>
             <div class="dropdown-content">
                 <p>Settings</p>
             </div>
@@ -27,14 +21,29 @@
     <main>
         <article class="login-card-article">
             <section class="login-card">
-                <p style="font-size: 1.5em;">Login</p>
-                <form>
+                <p style="font-size: 1.5em;" class="card-text sign-in-text">Sign Up</p>
+                <p style="font-size: 1.5em;" class="card-text login-text hide">Login</p>
+<!--                <p style="font-size: 1.5em;">Login</p>-->
+                <form class="hide">
                     <label class="login-email">Email</label>
                     <input type="text" class="email-answer input">
                     <label class="login-password">Password</label>
                     <input type="text" class="password-answer input">
     <!--                <button class="login-button" onClick="displayActivityCard(event)">LOGIN</button>-->
-                    <a th:href="@{/showNewUserForm}" class="login-button" onclick="displayActivityCard(event)">LOGIN</a>
+                    <a th:href="@{/showActivityForm}" class="login-button" onclick="displayActivityCard(event)">LOGIN</a>
+                </form>
+                <form>
+                    <label class="first-name">First Name</label>
+                    <input type="text" class="first-answer input">
+                    <label class="first-name">Last Name</label>
+                    <input type="text" class="last-answer input">
+                    <label class="login-email">Email</label>
+                    <input type="text" class="email-answer input">
+                    <label class="login-password">Password</label>
+                    <input type="text" class="password-answer input">
+                    <a th:href="@{/showActivityForm}" class="login-button" onclick="displayActivityCard(event)">GET STARTED</a>
+
+<!--                    <button class="login-button" onClick="displayActivityCard(event)">GET STARTED</button>-->
                 </form>
             </section>
         </article>

@@ -4,6 +4,11 @@
   max-width: 100%;
 }
 
+body {
+            background-color: #2B2733;
+            min-width: 230px;
+        }
+
 button {
   box-shadow: none;
   outline: none;
