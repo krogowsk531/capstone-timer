@@ -24,25 +24,25 @@
                 <p style="font-size: 1.5em;" class="card-text sign-in-text">Sign Up</p>
                 <p style="font-size: 1.5em;" class="card-text login-text hide">Login</p>
 <!--                <p style="font-size: 1.5em;">Login</p>-->
-                <form class="hide">
-                    <label class="login-email">Email</label>
-                    <input type="text" class="email-answer input">
-                    <label class="login-password">Password</label>
-                    <input type="text" class="password-answer input">
-    <!--                <button class="login-button" onClick="displayActivityCard(event)">LOGIN</button>-->
-                    <a th:href="@{/showActivityForm}" class="login-button" onclick="displayActivityCard(event)">LOGIN</a>
-                </form>
-                <form>
+<!--                <form class="hide">-->
+<!--                    <label class="login-email">Email</label>-->
+<!--                    <input type="text" class="email-answer input">-->
+<!--                    <label class="login-password">Password</label>-->
+<!--                    <input type="text" class="password-answer input">-->
+<!--    &lt;!&ndash;                <button class="login-button" onClick="displayActivityCard(event)">LOGIN</button>&ndash;&gt;-->
+<!--                    <a th:href="@{/showActivityForm}" class="login-button" onclick="displayActivityCard(event)">LOGIN</a>-->
+<!--                </form>-->
+                <form action="#" th:action="@{/saveUser}" th:object="${user}" method="POST">
                     <label class="first-name">First Name</label>
-                    <input type="text" class="first-answer input">
+                    <input type="text" th:field="*{firstName}" class="first-answer input">
                     <label class="first-name">Last Name</label>
-                    <input type="text" class="last-answer input">
+                    <input type="text" th:field="*{lastName}" class="last-answer input">
                     <label class="login-email">Email</label>
-                    <input type="text" class="email-answer input">
+                    <input type="text" th:field="*{email}" class="email-answer input">
                     <label class="login-password">Password</label>
-                    <input type="text" class="password-answer input">
-                    <a th:href="@{/showActivityForm}" class="login-button" onclick="displayActivityCard(event)">GET STARTED</a>
-
+                    <input type="text" th:field="*{password}" class="password-answer input">
+<!--                    <a th:href="@{/showActivityForm}" class="login-button" onclick="displayActivityCard(event)">GET STARTED</a>-->
+                    <button type="submit">GET STARTED</button>
 <!--                    <button class="login-button" onClick="displayActivityCard(event)">GET STARTED</button>-->
                 </form>
             </section>

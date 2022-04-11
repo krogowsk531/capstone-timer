@@ -24,6 +24,21 @@ public class UserController {
         return "index";
     }
 
+    @GetMapping("/signUp")
+    public String showSignUpForm(Model model) {
+        User user = new User();
+        model.addAttribute("user", user);
+        return "index";
+    }
+
+    @PostMapping("/saveUser")
+    public String saveUser(@ModelAttribute("user") User user) {
+        userService.saveUser(user);
+        return "redirect";
+    }
+
+
+
     @GetMapping("/showActivityForm")
     public String showActivityForm(Model model) {
         // create model attribute to bind form data
@@ -32,12 +47,13 @@ public class UserController {
         return "new_activity";
     }
 
-    @PostMapping("/saveUser")
-    public String saveUser(@ModelAttribute("user") User user) {
-        // save user to database
-        userService.saveUser(user);
-        return "redirect:/";
-    }
+//    @PostMapping("/saveUser")
+//    public String saveUser(@ModelAttribute("user") User user) {
+//        // save user to database
+//        userService.saveUser(user);
+//        return "redirect:/";
+////        return "index";
+//    }
 
     @GetMapping("/showFormForUpdate/{id}")
     public String showFormForUpdate(@PathVariable(value = "id") long id, Model model) {
