@@ -103,12 +103,10 @@ div {
 
 form {
   color: #CBC9CF;
-  column-gap: 1em;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
-  grid-template-rows:  repeat(7, 1fr);
-  margin: 10px;
-  row-gap: .5em;
+      flex-direction: column;
+      display: flex;
+      margin: 10px;
+      row-gap: 0.5em
 }
 
 .alert-icon {
@@ -191,7 +189,8 @@ form {
   border-bottom: 2px solid #CBC9CF;
   color: #CBC9CF;
   font-size: 1.2em;
-  margin-bottom: .4em;
+  width: 23em;
+  margin-bottom: 1.4em;
 }
 
 p {
@@ -422,11 +421,17 @@ h3 {
 }
 
 .sign-in-text {
-  padding-left: 1em;
   color: #FFF;
 }
 
 .login-text {
   padding-right: 1em;
   color: #FFF;
+}
+
+.get-started-button {
+    height: 2.9em;
+    justify-self: end;
+    width: 15em;
+    margin-top: 15px;
 }
