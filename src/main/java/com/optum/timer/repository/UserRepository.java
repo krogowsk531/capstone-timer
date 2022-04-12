@@ -7,5 +7,5 @@ import com.optum.timer.model.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
-
+    User findByEmail(String email);
 }

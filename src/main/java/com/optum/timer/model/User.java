@@ -1,13 +1,15 @@
 package com.optum.timer.model;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 @Table(name = "users")
+@Table(uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @Column(name = "first_name")
@@ -20,7 +22,17 @@ public class User {
     private String email;
 
     @Column(name = "password")
-    private char[] password;
+    private String password;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "users_roles",
+            joinColumns = @JoinColumn(
+                    name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(
+                    name = "role_id", referencedColumnName = "id"))
+            )
+    )
 
     public long getId() {
         return id;
@@ -58,7 +70,7 @@ public class User {
         return password;
     }
 
-    public void setPassword(char[] password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 }

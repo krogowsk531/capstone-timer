@@ -32,7 +32,7 @@
 <!--    &lt;!&ndash;                <button class="login-button" onClick="displayActivityCard(event)">LOGIN</button>&ndash;&gt;-->
 <!--                    <a th:href="@{/showActivityForm}" class="login-button" onclick="displayActivityCard(event)">LOGIN</a>-->
 <!--                </form>-->
-                <form action="#" th:action="@{/saveUser}" th:object="${user}" method="POST">
+                <form action="#" th:action="@{/registerUser}" th:object="${user}" method="POST">
                     <label class="first-name">First Name</label>
                     <input type="text" th:field="*{firstName}" class="first-answer input">
                     <label class="first-name">Last Name</label>
