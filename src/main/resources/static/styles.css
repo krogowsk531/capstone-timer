@@ -3,11 +3,10 @@
   font-family: 'Montserrat', sans-serif;
   max-width: 100%;
 }
-
 body {
-            background-color: #2B2733;
-            min-width: 230px;
-        }
+      background-color: #2B2733;
+      min-width: 230px;
+    }
 
 button {
   box-shadow: none;
@@ -415,10 +414,10 @@ h3 {
   display: block;
 }
 
-.sign-in-area {
+/*.sign-in-area {
   background: #76727E;
   border-radius: 0.5em;
-}
+}*/
 
 .sign-in-text {
   color: #FFF;
