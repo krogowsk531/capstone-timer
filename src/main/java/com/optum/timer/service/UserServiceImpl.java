@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 
 
 import com.optum.timer.dto.UserRegistrationDto;
+import com.optum.timer.model.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.security.core.GrantedAuthority;

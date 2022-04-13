@@ -1,28 +1,84 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-    <meta charset="ISO-8859-1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap">
-    <title>Intention Timer</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css"
+          th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+
+    <title>Registration</title>
 </head>
 <body>
-    <header>
-        <h1>INTENTION TIMER</h1>
-        <div class="dropdown">
-            <img class="icon ham-icon" src="/ham-menu.png" alt="hamburger menu"/>
-            <div class="dropdown-content">
-                <p>Settings</p>
-            </div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span> <span
+                    class="icon-bar"></span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" th:href="@{/}">Registration and
+                Login Module</a>
         </div>
-    </header>
-    <main>
-        <article class="login-card-article">
-            <section class="login-card">
-                <p style="font-size: 2.3em;" class="card-text sign-in-text">Sign Up</p>
-                <p style="font-size: 2.3em;" class="card-text login-text hide">Login</p>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<br>
+<br>
+<div class="container">
+    <h2>com.example.demo.security.User Registration and Login Module using Spring Boot, Spring
+        MVC, Spring Security, JPA/Hibernate and Thymeleaf</h2>
+
+    <p>
+        Welcome <span sec:authentication="principal.username">com.example.demo.security.User</span>
+    </p>
+</div>
+
+<script type="text/javascript"
+        th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>
+<script type="text/javascript"
+        th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>-->
+
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+
+<!--<head>-->
+<!--    <meta charset="ISO-8859-1">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--    <link rel="stylesheet" href="/styles.css">-->
+<!--    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap">-->
+<!--    <title>Intention Timer</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <header>-->
+<!--        <h1>INTENTION TIMER</h1>-->
+<!--        <div class="dropdown">-->
+<!--            <img class="icon ham-icon" src="/ham-menu.png" alt="hamburger menu"/>-->
+<!--            <div class="dropdown-content">-->
+<!--                <p>Settings</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </header>-->
+<!--    <main>-->
+<!--        <article class="login-card-article">-->
+<!--            <section class="login-card">-->
+<!--                <p style="font-size: 2.3em;" class="card-text sign-in-text">Sign Up</p>-->
+<!--                <p style="font-size: 2.3em;" class="card-text login-text hide">Login</p>-->
 <!--                <p style="font-size: 1.5em;">Login</p>-->
 <!--                <form class="hide">-->
 <!--                    <label class="login-email">Email</label>-->
@@ -32,21 +88,21 @@
 <!--    &lt;!&ndash;                <button class="login-button" onClick="displayActivityCard(event)">LOGIN</button>&ndash;&gt;-->
 <!--                    <a th:href="@{/showActivityForm}" class="login-button" onclick="displayActivityCard(event)">LOGIN</a>-->
 <!--                </form>-->
-                <form action="#" th:action="@{/registerUser}" th:object="${user}" method="POST">
-                    <label class="first-name">First Name</label>
-                    <input type="text" th:field="*{firstName}" class="first-answer input">
-                    <label class="first-name">Last Name</label>
-                    <input type="text" th:field="*{lastName}" class="last-answer input">
-                    <label class="login-email">Email</label>
-                    <input type="text" th:field="*{email}" class="email-answer input">
-                    <label class="login-password">Password</label>
-                    <input type="text" th:field="*{password}" class="password-answer input">
-<!--                    <a th:href="@{/showActivityForm}" class="login-button" onclick="displayActivityCard(event)">GET STARTED</a>-->
-                    <button class="get-started-button" type="submit">GET STARTED</button>
-<!--                    <button class="login-button" onClick="displayActivityCard(event)">GET STARTED</button>-->
-                </form>
-            </section>
-        </article>
-    </main>
-</body>
-</html>
+<!--                <form action="#" th:action="@{/registerUser}" th:object="${user}" method="POST">-->
+<!--                    <label class="first-name">First Name</label>-->
+<!--                    <input type="text" th:field="*{firstName}" class="first-answer input">-->
+<!--                    <label class="first-name">Last Name</label>-->
+<!--                    <input type="text" th:field="*{lastName}" class="last-answer input">-->
+<!--                    <label class="login-email">Email</label>-->
+<!--                    <input type="text" th:field="*{email}" class="email-answer input">-->
+<!--                    <label class="login-password">Password</label>-->
+<!--                    <input type="text" th:field="*{password}" class="password-answer input">-->
+<!--&lt;!&ndash;                    <a th:href="@{/showActivityForm}" class="login-button" onclick="displayActivityCard(event)">GET STARTED</a>&ndash;&gt;-->
+<!--                    <button class="get-started-button" type="submit">GET STARTED</button>-->
+<!--&lt;!&ndash;                    <button class="login-button" onClick="displayActivityCard(event)">GET STARTED</button>&ndash;&gt;-->
+<!--                </form>-->
+<!--            </section>-->
+<!--        </article>-->
+<!--    </main>-->
+<!--</body>-->
+<!--</html>-->

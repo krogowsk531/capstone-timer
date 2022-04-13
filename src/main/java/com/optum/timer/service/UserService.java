@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 
 import com.optum.timer.model.User;
 
-public interface UserService {
+public interface UserService extends UserDetailsService {
     List < User > getAllUsers();
     void registerUser(User user);
     User getUserById(long id);
