@@ -13,9 +13,21 @@
         <section class="activity-card">
             <p class="card-text">Select a category</p>
             <div class="activity-button-container">
-                <button class="activity-button study-button"><img class="icon study-icon" src="assets/study.svg" alt="Lightbulb Off"/><img class="icon study-icon-active hide" src="assets/study-active.svg" alt="Lightbulb On"/>Study</button>
-                <button class="activity-button meditate-button"><img class="icon meditate-icon" src="assets/meditate.svg" alt="Lotus Flower"/><img class="icon meditate-icon-active hide" src="assets/meditate-active.svg" alt="Lotus Flower On"/>Meditate</button>
-                <button class="activity-button exercise-button"><img class="icon exercise-icon" src="assets/exercise.svg" alt="Moving Shoe"/><img class="icon exercise-icon-active hide" src="assets/exercise-active.svg" alt="Moving Shoe On"/>Exercise</button>
+                <button class="activity-button study-button">
+                    <img th:src="@{/img/study.svg}" class="icon study-icon" src="../static/img/study.svg" alt="Lightbulb Off"/>
+                    <img th:src="@{/img/study-active.svg}" class="icon study-icon-active hide" src="../static/img/study-active.svg" alt="Lightbulb On"/>
+                    Study
+                </button>
+                <button class="activity-button meditate-button">
+                    <img th:src="@{/img/meditate.svg}" class="icon meditate-icon" src="../static/img/meditate.svg" alt="Lotus Flower"/>
+                    <img th:src="@{/img/meditate-active.svg}" class="icon meditate-icon-active hide" src="../static/img/meditate-active.svg" alt="Lotus Flower On"/>
+                    Meditate
+                </button>
+                <button class="activity-button exercise-button">
+                    <img th:src="@{/img/exercise.svg}" class="icon exercise-icon" src="../static/img/exercise.svg" alt="Moving Shoe"/>
+                    <img th:src="@{/img/exercise-active.svg}" class="icon exercise-icon-active hide" src="../static/img/exercise-active.svg" alt="Moving Shoe On"/>
+                    Exercise
+                </button>
             </div>
             <form>
                 <label class="intention-question">What would you like to accomplish during this time?</label>
