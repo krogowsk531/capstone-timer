@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap">
+    <title>Intention Timer</title>
+    <style>
+    body {
+      background-color: #2B2733;
+      min-width: 230px;
+    }
+  </style>
+</head>
+<body>
+<header>
+    <h1>INTENTION TIMER</h1>
+    <div class="dropdown">
+        <img class="icon ham-icon" src="assets/ham-menu.png" alt="hamburger menu"/>
+        <div class="dropdown-content">
+            <p>Settings</p>
+        </div>
+    </div>
+</header>
+<article class="timer-card-article hide">
+    <h2>Current Activity</h2>
+    <section class="timer-card">
+        <div class="user-input">
+            <h3 class="user-intention">Deep Breathing</h3>
+            <p class="timer-text"><span class="minutes-text">05</span>:<span class="seconds-text">00</span></p>
+        </div>
+        <button class="timer-button">START</button>
+        <button class="log-activity-button" onClick="logActivity()">LOG ACTIVITY</button>
+    </section>
+</article>
+<aside class="past-activity-article hide">
+    <h2>Past Activities</h2>
+    <p class="no-activities-message">You haven't logged any activities yet.  Complete the form to the left to get started!</p>
+    <div class="card-container hide">
+        <article class="past-activity-card">
+            <div class="activity-color-tag"></div>
+        </article>
+    </div>
+</aside>
+</main>
+<script src="src/activity.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>

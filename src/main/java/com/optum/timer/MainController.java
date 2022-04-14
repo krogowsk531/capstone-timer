@@ -17,6 +17,11 @@ public class MainController {
         return "login";
     }
 
+    @GetMapping("/timer")
+    public String timer(Model model) {
+        return "timer";
+    }
+
     @GetMapping("/user")
     public String userIndex() {
         return "user/index";
