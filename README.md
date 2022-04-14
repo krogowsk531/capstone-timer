@@ -7,3 +7,8 @@
 
 * About 23% complete
 * Making progress with implementing spring security with login
+
+# 04/14 
+
+* About 40% complete
+* Security is implemented, working on navigation between different pages

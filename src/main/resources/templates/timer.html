@@ -1,28 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/styles.css">
+    <link th:href="@{/css/styles.css}" href="../static/css/styles.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap">
-    <title>Intention Timer</title>
-    <style>
-    body {
-      background-color: #2B2733;
-      min-width: 230px;
-    }
-  </style>
+    <title>Timer</title>
 </head>
 <body>
 <header>
     <h1>INTENTION TIMER</h1>
-    <div class="dropdown">
-        <img class="icon ham-icon" src="assets/ham-menu.png" alt="hamburger menu"/>
-        <div class="dropdown-content">
-            <p>Settings</p>
-        </div>
-    </div>
+<!--    <div class="dropdown">-->
+<!--        <img class="icon ham-icon" src="assets/ham-menu.png" alt="hamburger menu"/>-->
+<!--        <div class="dropdown-content">-->
+<!--            <p>Settings</p>-->
+<!--        </div>-->
+<!--    </div>-->
 </header>
-<article class="timer-card-article hide">
+<article class="timer-card-article">
     <h2>Current Activity</h2>
     <section class="timer-card">
         <div class="user-input">
@@ -33,7 +29,7 @@
         <button class="log-activity-button" onClick="logActivity()">LOG ACTIVITY</button>
     </section>
 </article>
-<aside class="past-activity-article hide">
+<aside class="past-activity-article">
     <h2>Past Activities</h2>
     <p class="no-activities-message">You haven't logged any activities yet.  Complete the form to the left to get started!</p>
     <div class="card-container hide">
@@ -43,7 +39,7 @@
     </div>
 </aside>
 </main>
-<script src="src/activity.js"></script>
-<script src="src/main.js"></script>
+    <script type="text/javascript" th:src="@{/script/activity.js}" src="../static/script/activity.js"></script>
+    <script type="text/javascript" th:src="@{/script/main.js}" src="../static/script/main.js"></script>
 </body>
 </html>
