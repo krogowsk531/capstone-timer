@@ -176,10 +176,12 @@ form {
 }
 
 .start-activity-button {
+  background-color: #CBC9CF;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+  text-align: center;
   grid-area: 8 / 2 / 9 / 3;
-  height: 2.4em;
-  justify-self: end;
-  width: 15em;
 }
 
 .input {
