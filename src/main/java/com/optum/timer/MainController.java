@@ -3,6 +3,7 @@ package com.optum.timer;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class MainController {
@@ -17,15 +18,20 @@ public class MainController {
         return "login";
     }
 
-    @GetMapping("/timer")
-    public String timer(Model model) {
-        return "redirect:/timer";
+    @RequestMapping("/timer")
+    public String timer() {
+        return "timer";
     }
+
+
+
 
     @GetMapping("/user")
     public String userIndex() {
         return "user/index";
     }
+
+
 }
 
 
