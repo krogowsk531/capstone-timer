@@ -29,17 +29,18 @@ let tagColor;
 
 
 
-//timerButton.addEventListener('click', timerStart);
 
 window.onload = retrieveFromStorage();
 //window.onload = displayPastActivities();
 
 window.onload=function() {
     let startActivityButton = document.querySelector('.start-activity-button');
-//    startActivityButton.addEventListener('click', startActivity);
+    startActivityButton.addEventListener('click', startActivity);
 let activityButtonContainer = document.querySelector('.activity-button-container');
 
 activityButtonContainer.addEventListener('click', activityButton);
+timerButton.addEventListener('click', timerStart);
+
 
 
 
@@ -80,7 +81,7 @@ function selectStudyButton() {
   studyButton.classList.toggle('white');
   studyIcon.classList.toggle('hide');
   studyIconActive.classList.toggle('hide');
-//  timerButton.classList.add('green-circle');
+  timerButton.classList.add('green-circle');
   unselectMeditate();
   unselectExercise();
 };
@@ -92,7 +93,7 @@ function selectMeditateButton() {
   meditateButton.classList.toggle('white');
   meditateIcon.classList.toggle('hide');
   meditateIconActive.classList.toggle('hide');
-//  timerButton.classList.add('purple-circle');
+  timerButton.classList.add('purple-circle');
   unselectStudy();
   unselectExercise();
 };
@@ -104,7 +105,7 @@ function selectExerciseButton() {
   exerciseButton.classList.toggle('white');
   exerciseIcon.classList.toggle('hide');
   exerciseIconActive.classList.toggle('hide');
-//  timerButton.classList.add('red-circle');
+  timerButton.classList.add('red-circle');
   unselectMeditate();
   unselectStudy();
 };
@@ -113,21 +114,21 @@ function unselectStudy() {
   studyIconActive.classList.add('hide');
   studyIcon.classList.remove('hide');
   studyButton.classList.remove('green');
-//  timerButton.classList.remove('green-circle');
+  timerButton.classList.remove('green-circle');
 };
 
 function unselectMeditate() {
   meditateButton.classList.remove('purple');
   meditateIcon.classList.remove('hide');
   meditateIconActive.classList.add('hide');
-//  timerButton.classList.remove('purple-circle');
+  timerButton.classList.remove('purple-circle');
 };
 
 function unselectExercise() {
   exerciseIconActive.classList.add('hide');
   exerciseIcon.classList.remove('hide');
   exerciseButton.classList.remove('red');
-//  timerButton.classList.remove('red-circle');
+  timerButton.classList.remove('red-circle');
 };
 
 function displayActivityCard(event) {
@@ -158,24 +159,24 @@ function storeInformation() {
   }
 };
 
-//function timerStart() {
-//  let intentionTimer = setInterval(timerCountdown, 1000);
-//  let activity = activityInformation[0];
-//  let allSeconds = activity.countdown();
-//  function timerCountdown() {
-//    allSeconds--;
-//    minutesText.innerText = Math.floor((allSeconds/60) % 60 );
-//    secondsText.innerText = Math.floor((allSeconds) % 60 );
-//    if (allSeconds < 0) {
-//      clearInterval(intentionTimer);
-//      timerComplete();
-//    }
-//    if (secondsText.innerText < 10) {
-//      secondsText.innerText = ('0' + secondsText.innerText);
-//    }
-//  }
-//  timerButton.disabled = true;
-//};
+function timerStart() {
+  let intentionTimer = setInterval(timerCountdown, 1000);
+  let activity = activityInformation[0];
+  let allSeconds = activity.countdown();
+  function timerCountdown() {
+    allSeconds--;
+    minutesText.innerText = Math.floor((allSeconds/60) % 60 );
+    secondsText.innerText = Math.floor((allSeconds) % 60 );
+    if (allSeconds < 0) {
+      clearInterval(intentionTimer);
+      timerComplete();
+    }
+    if (secondsText.innerText < 10) {
+      secondsText.innerText = ('0' + secondsText.innerText);
+    }
+  }
+  timerButton.disabled = true;
+};
 
 function timerComplete() {
   let activity = activityInformation[0];
@@ -205,7 +206,7 @@ function logActivity() {
   displayPastActivities();
   timerCard.classList.add('hide');
   completedActivity.classList.remove('hide');
-//  timerButton.disabled = false;
+  timerButton.disabled = false;
 };
 
 function retrieveFromStorage() {
@@ -229,7 +230,7 @@ function clearLogin() {
 function returnHome() {
   completedActivity.classList.add('hide');
   activityCard.classList.remove('hide');
-//  timerButton.innerText = `START`;
+  timerButton.innerText = `START`;
   clearForm();
 };
 
