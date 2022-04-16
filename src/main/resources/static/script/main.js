@@ -37,9 +37,13 @@ window.onload = retrieveFromStorage();
 window.onload=function() {
     let startActivityButton = document.querySelector('.start-activity-button');
 //    startActivityButton.addEventListener('click', startActivity);
+let activityButtonContainer = document.querySelector('.activity-button-container');
+
+activityButtonContainer.addEventListener('click', activityButton);
+
+
+
     startActivity(event);
-    let activityButtonContainer = document.querySelector('.activity-button-container');
-    activityButtonContainer.addEventListener('click', activityButton);
 }
 
 function startActivity(event) {
@@ -48,6 +52,16 @@ function startActivity(event) {
   allowDisplayTimerCard();
 //  logActivityButton.disabled = true;
 };
+
+    function activityButton(event) {
+      if (event.target.classList.contains('study-button')) {
+        selectStudyButton();
+      } else if (event.target.classList.contains('meditate-button')) {
+        selectMeditateButton();
+      } else if (event.target.classList.contains('exercise-button')) {
+        selectExerciseButton();
+      }
+    };
 
 function activityButton(event) {
   if (event.target.classList.contains('study-button')) {
