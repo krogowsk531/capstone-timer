@@ -57,15 +57,9 @@
             <button class="log-activity-button">LOG ACTIVITY</button>
         </section>
     </article>
-    <aside class="past-activity-article">
-        <h2>Past Activities</h2>
-        <p class="no-activities-message">You haven't logged any activities yet.  Complete the form to the left to get started!</p>
-        <div class="card-container hide">
-            <article class="past-activity-card">
-                <div class="activity-color-tag"></div>
-            </article>
-        </div>
-    </aside>
+    <div th:replace="fragments/activitiesaside :: pastactivities">
+
+    </div>
 </main>
     <script type="text/javascript" th:src="@{/script/activity.js}" src="../static/script/activity.js"></script>
     <script type="text/javascript" th:src="@{/script/main.js}" src="../static/script/main.js"></script>
