@@ -1,7 +1,7 @@
 let loginCard = document.querySelector('.login-card-article');
 let pastActivitySection = document.querySelector('.past-activity-article');
 let activityCard = document.querySelector('.activity-card-article');
-
+let startActivityLink = document.querySelector('.start-activity-link')
 let studyButton = document.querySelector('.study-button');
 let studyIcon = document.querySelector('.study-icon');
 let studyIconActive = document.querySelector('.study-icon-active');
@@ -34,17 +34,13 @@ window.onload = retrieveFromStorage();
 //window.onload = displayPastActivities();
 
 window.onload=function() {
-    let startActivityButton = document.querySelector('.start-activity-button');
-    startActivityButton.addEventListener('click', startActivity);
+//    let startActivityButton = document.querySelector('.start-activity-button');
+//    startActivityLink.addEventListener('click', startActivity);
 let activityButtonContainer = document.querySelector('.activity-button-container');
 
 activityButtonContainer.addEventListener('click', activityButton);
 timerButton.addEventListener('click', timerStart);
-
-
-
-
-    startActivity(event);
+startActivity(event)
 }
 
 function startActivity(event) {
@@ -139,8 +135,8 @@ function displayActivityCard(event) {
 };
 
 function displayTimerCard() {
-  timerCard.classList.remove('hide');
-  activityCard.classList.add('hide');
+//  timerCard.classList.remove('hide');
+//  activityCard.classList.add('hide');
   let activity = activityInformation[0];
   activity.display();
 };

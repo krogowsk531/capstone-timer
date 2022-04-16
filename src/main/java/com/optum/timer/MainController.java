@@ -18,6 +18,11 @@ public class MainController {
         return "login";
     }
 
+    @GetMapping("/activity")
+    public String activity() {
+        return "activity";
+    }
+
     @RequestMapping("/timer")
     public String timer() {
         return "timer";
