@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap">
 </head>
 <body>
+<div th:replace="fragments/topnav :: navbar">
+
+</div>
 <main>
     <article class="activity-card-article">
         <h2>New Activity</h2>
@@ -51,7 +54,7 @@
                 <p class="timer-text"><span class="minutes-text">05</span>:<span class="seconds-text">00</span></p>
             </div>
             <button class="timer-button">START</button>
-            <button class="log-activity-button" onClick="logActivity()">LOG ACTIVITY</button>
+            <button class="log-activity-button">LOG ACTIVITY</button>
         </section>
     </article>
     <aside class="past-activity-article">

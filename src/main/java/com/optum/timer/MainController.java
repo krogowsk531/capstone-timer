@@ -23,8 +23,10 @@ public class MainController {
         return "timer";
     }
 
-
-
+    @RequestMapping("/navigate")
+    public String navigate() {
+        return "navigate";
+    }
 
     @GetMapping("/user")
     public String userIndex() {

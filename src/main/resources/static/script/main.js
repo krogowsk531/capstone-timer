@@ -16,7 +16,7 @@ let minutesNumberOnly = document.querySelector('.minutes-input');
 let secondsNumberOnly = document.querySelector('.seconds-input');
 let timerCard = document.querySelector('.timer-card-article');
 let userIntention = document.querySelector('.user-intention');
-//let logActivityButton = document.querySelector('.log-activity-button');
+let logActivityButton = document.querySelector('.log-activity-button');
 let minutesText = document.querySelector('.minutes-text');
 let secondsText = document.querySelector('.seconds-text');
 let timerButton = document.querySelector('.timer-button');
@@ -51,7 +51,7 @@ function startActivity(event) {
   event.preventDefault();
   storeInformation();
   allowDisplayTimerCard();
-//  logActivityButton.disabled = true;
+  logActivityButton.disabled = true;
 };
 
     function activityButton(event) {
@@ -181,7 +181,7 @@ function timerStart() {
 function timerComplete() {
   let activity = activityInformation[0];
   activity.markComplete();
-//  logActivityButton.disabled = false;
+  logActivityButton.disabled = false;
 };
 
 function displayPastActivities() {
