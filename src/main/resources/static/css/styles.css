@@ -4,9 +4,20 @@
   max-width: 100%;
 }
 body {
-      background-color: #2B2733;
-      min-width: 230px;
-    }
+  background-color: #2B2733;
+  min-width: 230px;
+}
+
+a {
+  background-color: #CFCAD8;
+  color: white;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1.5em;
+  border-radius: 3px;
+}
 
 button {
   box-shadow: none;
@@ -436,4 +447,8 @@ h3 {
     justify-self: end;
     width: 15em;
     margin-top: 15px;
+}
+
+.completed-activity {
+    grid-area: 1/ 1 / 1 / 3;
 }

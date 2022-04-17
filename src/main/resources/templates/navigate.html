@@ -17,8 +17,12 @@
     <article class="completed-activity">
         <h2>Completed Activity</h2>
         <section>
-            <button class="new-activity-button">CREATE A NEW ACTIVITY</button>
-            <button class="logout-button">LOGOUT</button>
+            <a href="/navigate" th:href="@{/activity}">CREATE A NEW ACTIVITY</a>
+
+<!--            <button class="new-activity-button">CREATE A NEW ACTIVITY</button>-->
+            <a href="/navigate" th:href="@{/login}">LOGOUT</a>
+
+<!--            <button class="logout-button">LOGOUT</button>-->
         </section>
     </article>
 </main>

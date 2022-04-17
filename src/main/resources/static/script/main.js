@@ -1,7 +1,6 @@
 let loginCard = document.querySelector('.login-card-article');
 let pastActivitySection = document.querySelector('.past-activity-article');
 let activityCard = document.querySelector('.activity-card-article');
-let startActivityLink = document.querySelector('.start-activity-link')
 let studyButton = document.querySelector('.study-button');
 let studyIcon = document.querySelector('.study-icon');
 let studyIconActive = document.querySelector('.study-icon-active');
@@ -28,23 +27,24 @@ let selectedCategory;
 let tagColor;
 
 
-
-
+window.onload = startActivity();
 window.onload = retrieveFromStorage();
-//window.onload = displayPastActivities();
+window.onload = displayPastActivities();
+
 
 window.onload=function() {
 //    let startActivityButton = document.querySelector('.start-activity-button');
-//    startActivityLink.addEventListener('click', startActivity);
+//let startActivityLink = document.querySelector('.start-activity-link')
+//startActivityLink.addEventListener('click', startActivity);
 let activityButtonContainer = document.querySelector('.activity-button-container');
 
 activityButtonContainer.addEventListener('click', activityButton);
 timerButton.addEventListener('click', timerStart);
-startActivity(event)
+//startActivity(event)
 }
 
-function startActivity(event) {
-  event.preventDefault();
+function startActivity() {
+//  event.preventDefault();
   storeInformation();
   allowDisplayTimerCard();
   logActivityButton.disabled = true;
@@ -129,8 +129,8 @@ function unselectExercise() {
 
 function displayActivityCard(event) {
   event.preventDefault();
-  activityCard.classList.remove('hide');
-  loginCard.classList.add('hide');
+//  activityCard.classList.remove('hide');
+//  loginCard.classList.add('hide');
   pastActivitySection.classList.remove('hide');
 };
 
