@@ -158,7 +158,9 @@ function storeInformation() {
 function timerStart() {
   let intentionTimer = setInterval(timerCountdown, 1000);
   let activity = activityInformation[0];
+  console.log(activity)
   let allSeconds = activity.countdown();
+
   function timerCountdown() {
     allSeconds--;
     minutesText.innerText = Math.floor((allSeconds/60) % 60 );
