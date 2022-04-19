@@ -2,6 +2,7 @@ package com.optum.timer.model;
 
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="Activity")
@@ -15,7 +16,7 @@ public class Activity {
     private long userId;
 
     @Column(name = "category")
-    private String category;
+    private List<Activity> category;
 
     @Column(name = "intention")
     private String intention;
@@ -27,11 +28,12 @@ public class Activity {
     private int seconds;
 
     @Column(name = "color")
-    private String color;
+    private List<Activity> color;
 
-    public Activity() {}
+    public Activity() {
+    }
 
-    public Activity(long userId, String category, String intention, int minutes, int seconds, String color) {
+    public Activity(long userId, List<Activity> category, String intention, int minutes, int seconds, List<Activity> color) {
         this.userId = userId;
         this.category = category;
         this.intention = intention;
@@ -56,11 +58,11 @@ public class Activity {
         this.userId = userId;
     }
 
-    public String getCategory() {
+    public List<Activity> getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(List<Activity> category) {
         this.category = category;
     }
 
@@ -88,11 +90,11 @@ public class Activity {
         this.seconds = seconds;
     }
 
-    public String getColor() {
+    public List<Activity> getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(List<Activity> color) {
         this.color = color;
     }
 }
