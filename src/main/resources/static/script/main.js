@@ -1,6 +1,7 @@
 let loginCard = document.querySelector('.login-card-article');
 let pastActivitySection = document.querySelector('.past-activity-article');
 let activityCard = document.querySelector('.activity-card-article');
+let activityButtonContainer = document.querySelector('.activity-button-container');
 let studyButton = document.querySelector('.study-button');
 let studyIcon = document.querySelector('.study-icon');
 let studyIconActive = document.querySelector('.study-icon-active');
@@ -26,39 +27,18 @@ let activityInformation = [];
 let selectedCategory;
 let tagColor;
 
+activityButtonContainer.addEventListener('click', activityButton);
+timerButton.addEventListener('click', timerStart);
 
-window.onload = startActivity();
 window.onload = retrieveFromStorage();
 window.onload = displayPastActivities();
 
-
-window.onload=function() {
-//    let startActivityButton = document.querySelector('.start-activity-button');
-//let startActivityLink = document.querySelector('.start-activity-link')
-//startActivityLink.addEventListener('click', startActivity);
-let activityButtonContainer = document.querySelector('.activity-button-container');
-
-activityButtonContainer.addEventListener('click', activityButton);
-timerButton.addEventListener('click', timerStart);
-//startActivity(event)
-}
-
-function startActivity() {
-//  event.preventDefault();
+function startActivity(event) {
+  event.preventDefault();
   storeInformation();
   allowDisplayTimerCard();
   logActivityButton.disabled = true;
 };
-
-    function activityButton(event) {
-      if (event.target.classList.contains('study-button')) {
-        selectStudyButton();
-      } else if (event.target.classList.contains('meditate-button')) {
-        selectMeditateButton();
-      } else if (event.target.classList.contains('exercise-button')) {
-        selectExerciseButton();
-      }
-    };
 
 function activityButton(event) {
   if (event.target.classList.contains('study-button')) {
@@ -129,14 +109,14 @@ function unselectExercise() {
 
 function displayActivityCard(event) {
   event.preventDefault();
-//  activityCard.classList.remove('hide');
-//  loginCard.classList.add('hide');
+  activityCard.classList.remove('hide');
+  loginCard.classList.add('hide');
   pastActivitySection.classList.remove('hide');
 };
 
 function displayTimerCard() {
-//  timerCard.classList.remove('hide');
-//  activityCard.classList.add('hide');
+  timerCard.classList.remove('hide');
+  activityCard.classList.add('hide');
   let activity = activityInformation[0];
   activity.display();
 };
@@ -158,9 +138,7 @@ function storeInformation() {
 function timerStart() {
   let intentionTimer = setInterval(timerCountdown, 1000);
   let activity = activityInformation[0];
-  console.log(activity)
   let allSeconds = activity.countdown();
-
   function timerCountdown() {
     allSeconds--;
     minutesText.innerText = Math.floor((allSeconds/60) % 60 );
@@ -203,6 +181,7 @@ function displayPastActivities() {
 function logActivity() {
   displayPastActivities();
   timerCard.classList.add('hide');
+  pastActivitySection.classList.add('hide');
   completedActivity.classList.remove('hide');
   timerButton.disabled = false;
 };
@@ -235,7 +214,7 @@ function returnHome() {
 function logout() {
   completedActivity.classList.add('hide');
   loginCard.classList.remove('hide');
-  pastActivitySection.classList.add('hide');
+  pastActivitySection.classList.remove('hide');
   clearLogin();
   clearForm();
 };

@@ -1,4 +1,4 @@
-#Intention Timer
+# Intention Timer
 
 The Intention Timer aims to set goals for healthy and productive activities including studying, meditating and exercising. The user can choose from these activities and input their intention and amount of time they would like to spend on an activity, while a timer counts down the time for them. This information can then be stored and displayed so that the user can look at their activity history.  A user will also be able to add friends so that they can share the ways they are intentionally spending their time together.
 
