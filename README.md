@@ -33,3 +33,8 @@ The Intention Timer aims to set goals for healthy and productive activities incl
 
 * Navigation between pages using Thymeleaf is working for its intended purpose but is breaking functionality
 * Attempting to make multiple js files in order to solve functionality issue
+
+## 04/18    
+#### (65% Complete)
+
+*Have gone back to two js files for functionality purposes.  If time remains I will then try to refactor later.
