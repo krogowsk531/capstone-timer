@@ -14,7 +14,7 @@
     <article class="login-card-article">
         <section class="login-card">
             <div class="sign-in-area">
-            <h1>Login</h1>
+            <h1 class="login-text">Login</h1>
             <form th:action="@{/login}" method="post">
                 <div th:if="${param.error}">
                     <div class="alert alert-danger">Invalid username or
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                 <span>New user? <a href="/" th:href="@{/registration}">Register
+                 <span>New user? <a class="register-here-button" href="/" th:href="@{/registration}">Register
                        here</a></span>
                 </div>
             </form>
