@@ -209,6 +209,7 @@ function clearLogin() {
 function returnHome() {
   completedActivity.classList.add('hide');
   activityCard.classList.remove('hide');
+  pastActivitySection.classList.remove('hide');
   timerButton.innerText = `START`;
   clearForm();
 };
@@ -216,7 +217,7 @@ function returnHome() {
 function logout() {
   completedActivity.classList.add('hide');
 //  loginCard.classList.remove('hide');
-//  pastActivitySection.classList.remove('hide');
+  pastActivitySection.classList('hide');
   clearLogin();
   clearForm();
 };

@@ -502,4 +502,14 @@ align-content: center;
    font-size: .8em;
 }
 
-.new-activity-bu
+.first-answer {
+    grid-area: 3 / 1 / 4 / 3;
+    width: 70%;
+}
+
+.register-card {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    height: auto;
+}
