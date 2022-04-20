@@ -52,6 +52,7 @@ button {
 header {
   background-color: #46424D;
   width: 100%;
+  border-radius: 4px;
 }
 
 h1 {

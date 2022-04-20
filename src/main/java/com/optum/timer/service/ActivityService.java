@@ -1,12 +1,19 @@
-//package com.optum.timer.service;
-//
+package com.optum.timer.service;
+
 //import com.optum.timer.model.Activity;
 //
 //import java.util.List;
 //
-//public interface ActivityService {
+public interface ActivityService {
+//    List<Activity> listAll();
 //
-//    List<Activity> getAllActivities();
+//    void save(Activity activity);
 //
-//    Activity getActivitiesById(long userId);
-//}
+//    Activity get(Integer activityId);
+//
+//    void delete(Integer activityId);
+//
+//    Activity getActivityById(long activityId);
+//
+////    void delete(long activityId);
+}

@@ -1,15 +1,18 @@
 package com.optum.timer.model;
 
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.*;
 import java.util.List;
 
-//@Entity
+//@entity
 @Table(name="activities")
 public class Activity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long activityId;
 
     @Column(name = "user_id")

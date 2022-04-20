@@ -43,3 +43,8 @@ The Intention Timer aims to set goals for healthy and productive activities incl
 #### (68% Complete)
 
 * Debugged issues with Activity model.  Is no longer preventing functionality but is also not capturing info in the database.
+
+## 04/20
+#### (70% Complete)
+
+* Activity model is broken.  Worked on presentation for tomorrow and added media queries for responsiveness.  Functionality in app restored.

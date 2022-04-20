@@ -9,6 +9,8 @@
 //
 //@Service
 //public class ActivityServiceImpl implements ActivityService {
+//
+//
 //    private ActivityRepository activityRepository;
 //
 //    @Autowired
@@ -16,17 +18,33 @@
 //        this.activityRepository = activityRepository;
 //    }
 //
-//    public Activity getActivityById(long id) {
-//        return activityRepository.getActivityById(id);
+//    @Override
+//    public List<Activity> listAll() {
+//        return activityRepository.findAll();
 //    }
 //
 //    @Override
-//    public List<Activity> getAllActivities() {
+//    public void save(Activity activity) {
+//        activityRepository.save(activity);
+//    }
+//
+//    @Override
+//    public Activity get(Integer activityId) {
 //        return null;
 //    }
 //
 //    @Override
-//    public Activity getActivitiesById(long userId) {
-//        return null;
+//    public void delete(Integer activityId) {
+//
 //    }
+//
+//    @Override
+//    public Activity getActivityById(long activityId) {
+//        return activityRepository.getById(activityId);
+//    }
+//
+////    @Override
+////    public void delete(long activityId) {
+////        activityRepository.deleteById(activityId);
+////    }
 //}
