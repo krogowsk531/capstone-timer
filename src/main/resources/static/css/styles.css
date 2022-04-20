@@ -8,6 +8,26 @@ body {
   min-width: 230px;
 }
 
+#confirmEmail {
+  background-color: transparent;
+  border-style: none;
+  border-bottom: 2px solid #CBC9CF;
+  color: #CBC9CF;
+  font-size: 1.2em;
+  width: 23em;
+  margin-bottom: 1.4em;
+}
+
+#confirmPassword {
+  background-color: transparent;
+  border-style: none;
+  border-bottom: 2px solid #CBC9CF;
+  color: #CBC9CF;
+  font-size: 1.2em;
+  width: 23em;
+  margin-bottom: 1.4em;
+}
+
 a {
   background-color: #CFCAD8;
   color: white;
@@ -412,6 +432,8 @@ h3 {
   display: grid;
   align-content: center;
   justify-content: center;
+  height: auto;
+  }
 }
 
 .ham-icon {
@@ -466,4 +488,9 @@ h3 {
 .register-here-button {
     align-items: center;
     font-size: .8em;
+}
+
+.login-here {
+   align-items: center;
+   font-size: .8em;
 }
