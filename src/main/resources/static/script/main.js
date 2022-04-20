@@ -30,7 +30,7 @@ let tagColor;
 
 activityButtonContainer.addEventListener('click', activityButton);
 timerButton.addEventListener('click', timerStart);
-newActivityButton.addEventListner('click', returnHome)
+newActivityButton.addEventListener('click', returnHome)
 
 window.onload = retrieveFromStorage();
 window.onload = displayPastActivities();
