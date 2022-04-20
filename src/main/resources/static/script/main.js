@@ -23,12 +23,14 @@ let timerButton = document.querySelector('.timer-button');
 let completedActivity = document.querySelector('.completed-activity');
 let emailAnswer = document.querySelector('.email-answer');
 let passwordAnswer = document.querySelector('.password-answer');
+let newActivityButton = document.querySelector('.new-activity-button');
 let activityInformation = [];
 let selectedCategory;
 let tagColor;
 
 activityButtonContainer.addEventListener('click', activityButton);
 timerButton.addEventListener('click', timerStart);
+newActivityButton.addEventListner('click', returnHome)
 
 window.onload = retrieveFromStorage();
 window.onload = displayPastActivities();
@@ -213,8 +215,8 @@ function returnHome() {
 
 function logout() {
   completedActivity.classList.add('hide');
-  loginCard.classList.remove('hide');
-  pastActivitySection.classList.remove('hide');
+//  loginCard.classList.remove('hide');
+//  pastActivitySection.classList.remove('hide');
   clearLogin();
   clearForm();
 };

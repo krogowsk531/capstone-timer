@@ -55,8 +55,9 @@
     <article class="completed-activity hide">
         <h2>Completed Activity</h2>
         <section>
-            <button class="new-activity-button" onClick="returnHome()">CREATE A NEW ACTIVITY</button>
-            <button class="logout-button" onClick="logout()">LOGOUT</button>
+            <button class="new-activity-button">CREATE A NEW ACTIVITY</button>
+<!--            <button class="logout-button" onClick="logout()">LOGOUT</button>-->
+            <a class="logout-button" href="/" th:href="@{/login}">LOGOUT</a>
         </section>
     </article>
     <aside class="past-activity-article">
