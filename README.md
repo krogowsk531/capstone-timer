@@ -37,4 +37,9 @@ The Intention Timer aims to set goals for healthy and productive activities incl
 ## 04/18    
 #### (65% Complete)
 
-*Have gone back to two js files for functionality purposes.  If time remains I will then try to refactor later.
+* Have gone back to two js files for functionality purposes.  If time remains I will then try to refactor later.
+
+## 04/19
+#### (68% Complete)
+
+* Debugged issues with Activity model.  Is no longer preventing functionality but is also not capturing info in the database.

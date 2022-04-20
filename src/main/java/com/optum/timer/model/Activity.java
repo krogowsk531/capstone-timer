@@ -4,8 +4,8 @@ package com.optum.timer.model;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity
-@Table(name="Activity")
+//@Entity
+@Table(name="activities")
 public class Activity {
 
     @Id
@@ -16,7 +16,7 @@ public class Activity {
     private long userId;
 
     @Column(name = "category")
-    private List<Activity> category;
+    private List<User> category;
 
     @Column(name = "intention")
     private String intention;
@@ -28,12 +28,12 @@ public class Activity {
     private int seconds;
 
     @Column(name = "color")
-    private List<Activity> color;
+    private List<User> color;
 
     public Activity() {
     }
 
-    public Activity(long userId, List<Activity> category, String intention, int minutes, int seconds, List<Activity> color) {
+    public Activity(long userId, List<User> category, String intention, int minutes, int seconds, List<User> color) {
         this.userId = userId;
         this.category = category;
         this.intention = intention;
@@ -58,11 +58,11 @@ public class Activity {
         this.userId = userId;
     }
 
-    public List<Activity> getCategory() {
+    public List<User> getCategory() {
         return category;
     }
 
-    public void setCategory(List<Activity> category) {
+    public void setCategory(List<User> category) {
         this.category = category;
     }
 
@@ -90,11 +90,15 @@ public class Activity {
         this.seconds = seconds;
     }
 
-    public List<Activity> getColor() {
+    public List<User> getColor() {
         return color;
     }
 
-    public void setColor(List<Activity> color) {
+    public void setColor(List<User> color) {
         this.color = color;
+    }
+
+    public Activity getActivityById(long id) {
+        return null;
     }
 }
