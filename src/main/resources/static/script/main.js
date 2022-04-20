@@ -131,7 +131,7 @@ function allowDisplayTimerCard() {
 
 function storeInformation() {
   if ((selectedCategory !== undefined) && (intentionInformation.value.length > 0) && (minutesNumberOnly.value.length > 0) && (secondsNumberOnly.value.length > 0)) {
-    let activityInstance = new Activity (selectedCategory, intentionInformation.value, minutesNumberOnly.value, secondsNumberOnly.value, tagColor);
+    let activityInstance = new Activity (selectedCategory, intentionInformation.value.toUpperCase(), minutesNumberOnly.value, secondsNumberOnly.value, tagColor);
     activityInformation.unshift(activityInstance);
     activityInformation[0].saveToStorage();
   }
