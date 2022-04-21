@@ -2,6 +2,7 @@ package com.optum.timer;
 
 //import com.optum.timer.model.Activity;
 //import com.optum.timer.service.ActivityService;
+import com.optum.timer.model.Activity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,7 +15,9 @@ import java.util.List;
 public class MainController {
 
     @GetMapping("/")
-    public String root() {
+    public String root(Model model) {
+        Activity activity = new Activity();
+        model.addAttribute("activity", activity);
         return "index";
     }
 

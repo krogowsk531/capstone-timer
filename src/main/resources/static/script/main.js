@@ -24,11 +24,14 @@ let completedActivity = document.querySelector('.completed-activity');
 let emailAnswer = document.querySelector('.email-answer');
 let passwordAnswer = document.querySelector('.password-answer');
 let newActivityButton = document.querySelector('.new-activity-button');
+let startActivityButton = document.querySelector('.start-activity-button')
 let activityInformation = [];
 let selectedCategory;
 let tagColor;
 
 activityButtonContainer.addEventListener('click', activityButton);
+console.log(startActivityButton)
+//startActivityButton.addEventListener('click', startActivity)
 timerButton.addEventListener('click', timerStart);
 newActivityButton.addEventListener('click', returnHome)
 
@@ -38,7 +41,9 @@ window.onload = displayPastActivities();
 function startActivity(event) {
   event.preventDefault();
   storeInformation();
+
   allowDisplayTimerCard();
+  console.log("here")
   logActivityButton.disabled = true;
 };
 
@@ -124,6 +129,7 @@ function displayTimerCard() {
 };
 
 function allowDisplayTimerCard() {
+    console.log("HERE")
   if ((selectedCategory !== undefined) && (intentionInformation.value.length > 0) && (minutesNumberOnly.value.length > 0) && (secondsNumberOnly.value.length > 0)) {
     displayTimerCard();
   }

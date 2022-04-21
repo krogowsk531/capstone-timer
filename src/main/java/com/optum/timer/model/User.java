@@ -2,6 +2,8 @@ package com.optum.timer.model;
 
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "users", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
@@ -32,6 +34,9 @@ public class User {
                     name = "role_id", referencedColumnName = "id"))
     private Collection<Role> roles;
 
+    @OneToMany(targetEntity = Activity.class, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private Set<Activity> activities = new HashSet<>();
+
     public User() {
 
     }
@@ -57,6 +62,14 @@ public class User {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public Set<Activity> getActivities() {
+        return activities;
+    }
+
+    public void setActivities(Set<Activity> activities) {
+        this.activities = activities;
     }
 
     public String getFirstName() {

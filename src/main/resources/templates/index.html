@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
@@ -30,14 +30,14 @@
                 Exercise
             </button>
         </div>
-        <form>
+        <form th:action="@{/addNewActivity}" th:object="${activity}" method="POST">
             <label class="intention-question">What would you like to accomplish during this time?</label>
-            <input type="text" class="intention-answer input">
+            <input th:field="*{intention}" id="intention" type="text" class="intention-answer input">
             <label class="minutes">Minutes</label>
-            <input maxlength="2" class="minutes-input input" type="text">
+            <input th:field="*{minutes}" id="minutes" maxlength="2" class="minutes-input input" type="text">
             <label class="seconds">Seconds</label>
-            <input maxlength="2" class="seconds-input input" type="text" >
-            <button class="start-activity-button" onClick="startActivity(event)">START ACTIVITY</button>
+            <input th:field="*{seconds}" id="seconds" maxlength="2" class="seconds-input input" type="text" >
+            <button class="start-activity-button" type="submit" th:onclick="startActivity(event)">START ACTIVITY</button>
         </form>
         </section>
     </article>
