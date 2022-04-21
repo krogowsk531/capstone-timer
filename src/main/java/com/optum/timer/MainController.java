@@ -1,7 +1,7 @@
 package com.optum.timer;
 
-import com.optum.timer.model.Activity;
-import com.optum.timer.service.ActivityService;
+//import com.optum.timer.model.Activity;
+//import com.optum.timer.service.ActivityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,6 +31,12 @@ public class MainController {
     @RequestMapping("/timer")
     public String timer() {
         return "timer";
+    }
+
+    @RequestMapping("/postActivity")
+    public String postActivity() {
+        System.out.println("HERE@");
+        return "postActivity/index";
     }
 
     @RequestMapping("/navigate")

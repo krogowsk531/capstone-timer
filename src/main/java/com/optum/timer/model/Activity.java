@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.*;
 import java.util.List;
 
-//@entity
+@Entity
 @Table(name="activities")
 public class Activity {
 
@@ -18,9 +18,6 @@ public class Activity {
     @Column(name = "user_id")
     private long userId;
 
-    @Column(name = "category")
-    private List<User> category;
-
     @Column(name = "intention")
     private String intention;
 
@@ -30,19 +27,15 @@ public class Activity {
     @Column(name = "seconds")
     private int seconds;
 
-    @Column(name = "color")
-    private List<User> color;
 
     public Activity() {
     }
 
-    public Activity(long userId, List<User> category, String intention, int minutes, int seconds, List<User> color) {
+    public Activity(long userId, String intention, int minutes, int seconds) {
         this.userId = userId;
-        this.category = category;
         this.intention = intention;
         this.minutes = minutes;
         this.seconds = seconds;
-        this.color = color;
     }
 
     public long getActivityId() {
@@ -59,14 +52,6 @@ public class Activity {
 
     public void setUserId(long userId) {
         this.userId = userId;
-    }
-
-    public List<User> getCategory() {
-        return category;
-    }
-
-    public void setCategory(List<User> category) {
-        this.category = category;
     }
 
     public String getIntention() {
@@ -91,14 +76,6 @@ public class Activity {
 
     public void setSeconds(int seconds) {
         this.seconds = seconds;
-    }
-
-    public List<User> getColor() {
-        return color;
-    }
-
-    public void setColor(List<User> color) {
-        this.color = color;
     }
 
     public Activity getActivityById(long id) {
