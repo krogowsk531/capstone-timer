@@ -1,5 +1,6 @@
 package com.optum.timer;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
@@ -19,4 +20,9 @@ public class CapstoneTimerApplication {
 		return new BCryptPasswordEncoder();
 	}
 
+
+	@Bean
+	public CommandLineRunner commandLineRunner() {
+		return args -> System.out.println("My application is running!!");
+	}
 }
