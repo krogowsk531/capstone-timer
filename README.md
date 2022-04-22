@@ -12,6 +12,9 @@ The Intention Timer aims to set goals for healthy and productive activities incl
 * As a user, I want to be to add friends, so that I can share my history with them and vise versa.
 * As a user, I would like to see this application on my computer as well as my cellphone, so that I can access my information across multiple platforms.
 
+## Grading Rubric
+
+https://docs.google.com/document/d/1EO4omeChI5H287vZLRaB20yGb_cq5SrEW6t4HvQKAac/edit
 
 ## 04/11
 #### (20% Complete)
