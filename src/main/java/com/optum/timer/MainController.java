@@ -9,6 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -25,6 +27,13 @@ public class MainController {
     public String login(Model model) {
         return "login";
     }
+
+//    @GetMapping("/logout")
+//    public String logout(HttpServletRequest request){
+//        HttpSession httpSession = request.getSession();
+//        httpSession.invalidate();
+//        return "redirect:/";
+//    }
 
     @GetMapping("/activity")
     public String activity(Model model) {
