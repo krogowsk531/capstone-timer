@@ -8,6 +8,15 @@ body {
   min-width: 230px;
 }
 
+h3 {
+  color: #FFF;
+  font-size: 1.5em;
+  margin: 0;
+  overflow: auto;
+  white-space: nowrap;
+  width: 100%;
+}
+
 #confirmEmail {
   background-color: transparent;
   border-style: none;
@@ -98,6 +107,15 @@ section {
   width: 150px;
 }
 
+.navbar-title {
+    color: #FFF;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0.8em;
+    text-align: inherit;
+}
+
 input {
   box-shadow: none;
   outline: none;
@@ -184,6 +202,19 @@ form {
   justify-self: start;
 }
 
+.future-intentions-title {
+color: #FFF;
+    font-size: 1.2e,;
+    margin: 0;
+    font-size: 1.2em;
+    padding-bottom: 0.5em;
+    /* padding-left: 0.5em; */
+    padding-right: 0.5em;
+    text-align: right;
+    white-space: nowrap;
+    width: 100%;
+}
+
 .intention-question {
   grid-area: 2 / 1 / 3 / 3;
   padding-top: 1em;
@@ -253,13 +284,15 @@ aside {
   grid-column: 1 /2 / 1/ 3;
 }
 
-h3 {
-  color: #FFF;
-  font-size: 1.5em;
-  margin: 0;
-  overflow: auto;
-  white-space: nowrap;
-  width: 100%;
+color: #FFF;
+    font-size: 1.2em;
+    margin: 0;
+    overflow: auto;
+    white-space: nowrap;
+    width: 100%;
+    padding-bottom: 0.5em;
+    padding-right: 0.5em;
+    text-align: right;
 }
 
 .no-activities-message {
