@@ -1,8 +1,6 @@
 package com.optum.timer.model;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity

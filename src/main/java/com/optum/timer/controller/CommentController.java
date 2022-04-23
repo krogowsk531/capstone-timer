@@ -2,6 +2,7 @@ package com.optum.timer.controller;
 
 import com.optum.timer.model.Activity;
 import com.optum.timer.model.Comment;
+import com.optum.timer.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +16,7 @@ import javax.validation.Valid;
 import java.security.Principal;
 
 @Controller
-public class CommentController {
+public class CommentController<model> {
 
     private CommentService commentService;
 
@@ -48,8 +49,12 @@ public class CommentController {
     }
 
     @GetMapping("/showFormForUpdate/{id}")
-    public String showFormForUpdate(@PathVariable = "id") long id, Model model) {
+    public String showFormForUpdate(@PathVariable(value = "id") long id, Model model) {
+
+        // get employee from the service
         Comment comment = commentService.getCommentById(id);
+
+        // set employee as a model attribute to pre-populate the form
         model.addAttribute("comment", comment);
         return "update_comment";
     }
@@ -57,6 +62,6 @@ public class CommentController {
     @GetMapping("/deleteComment/{id}")
     public String deleteComment(@PathVariable(value = "id") long id) {
         this.commentService.deleteCommentById(id);
-        return "redirect:/comments"
+        return "redirect:/comments";
     }
 }
