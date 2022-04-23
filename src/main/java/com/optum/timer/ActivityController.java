@@ -47,12 +47,14 @@ public class ActivityController {
     }
 
     @PostMapping("/addNewActivity")
-    public String saveNewActivity(@ModelAttribute("activity")Activity activity, Principal principal) {
+    public String saveNewActivity(@ModelAttribute("activity")Activity activity, Principal principal, Model model) {
+        System.out.println("HERETOOO" + activity.getIntention());
         User user = userRepository.findByEmail(principal.getName());
         activityService.save(activity);
         user.getActivities().add(activity);
         userDetails.saveUser(user);
-        return "redirect:/";
+        model.addAttribute("activity", activity);
+        return "timer";
     }
 
 //    @PostMapping(path="/add") // Map ONLY POST Requests

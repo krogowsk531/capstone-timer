@@ -8,54 +8,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap">
     <title>Timer</title>
 </head>
+
 <body>
 <div th:replace="fragments/topnav :: navbar">
 
 </div>
 <main>
-<article class="activity-card-article hide">
-    <h2>New Activity</h2>
-    <section class="activity-card">
-        <p class="card-text">Select a category</p>
-        <div class="activity-button-container">
-            <button class="activity-button study-button">
-                <img th:src="@{/img/study.svg}" class="icon study-icon" src="../static/img/study.svg" alt="Lightbulb Off"/>
-                <img th:src="@{/img/study-active.svg}" class="icon study-icon-active hide" src="../static/img/study-active.svg" alt="Lightbulb On"/>
-                Study
-            </button>
-            <button class="activity-button meditate-button">
-                <img th:src="@{/img/meditate.svg}" class="icon meditate-icon" src="../static/img/meditate.svg" alt="Lotus Flower"/>
-                <img th:src="@{/img/meditate-active.svg}" class="icon meditate-icon-active hide" src="../static/img/meditate-active.svg" alt="Lotus Flower On"/>
-                Meditate
-            </button>
-            <button class="activity-button exercise-button">
-                <img th:src="@{/img/exercise.svg}" class="icon exercise-icon" src="../static/img/exercise.svg" alt="Moving Shoe"/>
-                <img th:src="@{/img/exercise-active.svg}" class="icon exercise-icon-active hide" src="../static/img/exercise-active.svg" alt="Moving Shoe On"/>
-                Exercise
-            </button>
-        </div>
-        <form>
-            <label class="intention-question">What would you like to accomplish during this time?</label>
-            <input type="text" class="intention-answer input">
-            <label class="minutes">Minutes</label>
-            <input maxlength="2" class="minutes-input input" type="text">
-            <label class="seconds">Seconds</label>
-            <input maxlength="2" class="seconds-input input" type="text" >
-            <a class="start-activity-button" href="/" th:href="@{/timer}">Start Activity</a>
 
-            <!--                <a target="_blank" class="start-activity-button" href="/" th:href="@{/timer}">Start Activity</a>-->
-            <!--                <button class="start-activity-button">START ACTIVITY</button>-->
-        </form>
-    </section>
-</article>
 <article class="timer-card-article">
     <h2>Current Activity</h2>
     <section class="timer-card">
         <div class="user-input">
-            <h3 class="user-intention">Deep Breathing</h3>
-            <p class="timer-text"><span class="minutes-text">05</span>:<span class="seconds-text">00</span></p>
+            <h3 class="user-intention" th:text="${activity.intention}">Deep Breathing</h3>
+            <p class="timer-text"><span class="minutes-text" th:text="${activity.minutes}">05</span>:<span class="seconds-text" th:text="${activity.seconds}">00</span></p>
         </div>
-        <button class="timer-button">START</button>
+        <button class="timer-button" onclick="timerStart()">START</button>
         <a href="/" th:href="@{/navigate}">LOG ACTIVITY</a>
 
     </section>

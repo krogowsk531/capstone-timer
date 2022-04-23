@@ -37,7 +37,7 @@
             <input th:field="*{minutes}" id="minutes" maxlength="2" class="minutes-input input" type="text">
             <label class="seconds">Seconds</label>
             <input th:field="*{seconds}" id="seconds" maxlength="2" class="seconds-input input" type="text" >
-            <button class="start-activity-button" type="submit" th:onclick="startActivity(event)">START ACTIVITY</button>
+            <button class="start-activity-button" type="submit" >START ACTIVITY</button>
         </form>
         </section>
     </article>
@@ -74,3 +74,4 @@
 <script type="text/javascript" th:src="@{/script/main.js}" src="../static/script/main.js"></script>
 </body>
 </html>
+

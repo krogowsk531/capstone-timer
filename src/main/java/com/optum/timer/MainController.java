@@ -27,13 +27,10 @@ public class MainController {
     }
 
     @GetMapping("/activity")
-    public String activity() {
+    public String activity(Model model) {
+        Activity activity = new Activity();
+        model.addAttribute("activity", activity);
         return "activity";
-    }
-
-    @RequestMapping("/timer")
-    public String timer() {
-        return "timer";
     }
 
     @RequestMapping("/postActivity")
@@ -51,7 +48,8 @@ public class MainController {
     public String userIndex() {
         return "user/index";
     }
-    
+
 }
+
 
 

@@ -14,6 +14,8 @@ The Intention Timer aims to set goals for healthy and productive activities incl
 
 ## Grading Rubric
 
+Contact Sang Shin to access this document:
+
 https://docs.google.com/document/d/1EO4omeChI5H287vZLRaB20yGb_cq5SrEW6t4HvQKAac/edit
 
 ## 04/11

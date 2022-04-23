@@ -39,12 +39,13 @@ window.onload = retrieveFromStorage();
 window.onload = displayPastActivities();
 
 function startActivity(event) {
-  event.preventDefault();
+//  event.preventDefault();
   storeInformation();
 
   allowDisplayTimerCard();
   console.log("here")
   logActivityButton.disabled = true;
+  return true;
 };
 
 function activityButton(event) {
@@ -143,10 +144,18 @@ function storeInformation() {
   }
 };
 
+// return
+
+// userIntention.innerText = this.description;
+//     minutesText.innerText = this.minutes;
+//     secondsText.innerText = this.seconds;
+//     if (secondsText.innerText < 10) {
+//       secondsText.innerText = ('0' + secondsText.innerText);
+
 function timerStart() {
   let intentionTimer = setInterval(timerCountdown, 1000);
   let activity = activityInformation[0];
-  let allSeconds = activity.countdown();
+  let allSeconds = parseInt(minutesText.innerText) * 60 + parseInt(secondsText.innerText);
   function timerCountdown() {
     allSeconds--;
     minutesText.innerText = Math.floor((allSeconds/60) % 60 );
@@ -164,9 +173,15 @@ function timerStart() {
 
 function timerComplete() {
   let activity = activityInformation[0];
-  activity.markComplete();
+  markComplete();
   logActivityButton.disabled = false;
 };
+
+function markComplete() {
+    secondsText.innerText = `0`;
+    minutesText.innerText = `0`;
+    timerButton.innerText = `FINISHED`;
+ };
 
 function displayPastActivities() {
   let noActivitiesMessage = document.querySelector('.no-activities-message');
