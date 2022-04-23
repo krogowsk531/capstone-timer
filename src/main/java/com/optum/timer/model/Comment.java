@@ -8,8 +8,16 @@ import java.util.Objects;
 public class Comment {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
+//    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+//    @JoinTable(
+//            name = "user_comments",
+//            joinColumns = @JoinColumn(
+//                    name = "comment_id", referencedColumnName = "id"),
+//            inverseJoinColumns = @JoinColumn(
+//                    name = "user_id", referencedColumnName = "id"))
 
     @Column(name="future_intention")
     private String futureIntention;
