@@ -2,6 +2,7 @@ package com.optum.timer.controller;
 
 import com.optum.timer.model.Comment;
 import com.optum.timer.model.Friend;
+import com.optum.timer.service.FriendService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -49,7 +50,7 @@ public class FriendController {
     public String showUpdateFriendForm(@PathVariable(value = "id") long id, Model model) {
         Friend friend = friendService.getFriendById(id);
         model.addAttribute("friend", friend);
-        return "update_friend"
+        return "update_friend";
     }
 
     @GetMapping("/deleteFriend/{id}")
