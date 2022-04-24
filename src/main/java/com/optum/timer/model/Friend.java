@@ -2,6 +2,7 @@ package com.optum.timer.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -11,6 +12,14 @@ public class Friend {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "user_friends",
+            joinColumns = {@JoinColumn(name = "user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "friend_id")}
+    )
+    private Collection<Friend> friend;
 
     @Column(name="first_name")
     private String firstName;
