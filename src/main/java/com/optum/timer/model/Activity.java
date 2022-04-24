@@ -31,13 +31,6 @@ public class Activity {
     public Activity() {
     }
 
-    public Activity(long userId, String intention, int minutes, int seconds) {
-        this.userId = userId;
-        this.intention = intention;
-        this.minutes = minutes;
-        this.seconds = seconds;
-    }
-
     public long getActivityId() {
         return activityId;
     }
