@@ -35,12 +35,12 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
-    public Activity get(Integer activityId) {
+    public Activity getId(long id) {
         return null;
     }
 
     @Override
-    public void delete(Integer activityId) {
+    public void delete(long id) {
 
     }
 

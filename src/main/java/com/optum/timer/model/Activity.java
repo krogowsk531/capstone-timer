@@ -13,7 +13,7 @@ public class Activity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long activityId;
+    private long id;
 
     @Column(name = "user_id")
     private long userId;
@@ -31,12 +31,12 @@ public class Activity {
     public Activity() {
     }
 
-    public long getActivityId() {
-        return activityId;
+    public long getId() {
+        return id;
     }
 
-    public void setActivityId(long activityId) {
-        this.activityId = activityId;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public long getUserId() {
@@ -69,9 +69,5 @@ public class Activity {
 
     public void setSeconds(int seconds) {
         this.seconds = seconds;
-    }
-
-    public Activity getActivityById(long id) {
-        return null;
     }
 }

@@ -14,9 +14,9 @@ public interface ActivityService {
 
     void save(Activity activity);
 
-    Activity get(Integer activityId);
+    Activity getId(long id);
 
-    void delete(Integer activityId);
+    void delete(long id);
 
 //    Activity getActivityById(long activityId);
 

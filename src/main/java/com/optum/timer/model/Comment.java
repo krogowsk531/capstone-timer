@@ -1,6 +1,7 @@
 package com.optum.timer.model;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -11,13 +12,13 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-//    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-//    @JoinTable(
-//            name = "user_comments",
-//            joinColumns = @JoinColumn(
-//                    name = "comment_id", referencedColumnName = "id"),
-//            inverseJoinColumns = @JoinColumn(
-//                    name = "user_id", referencedColumnName = "id"))
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "user_comments",
+            joinColumns = {@JoinColumn(name = "user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "comment_id")}
+    )
+    private Collection<Comment> comment;
 
     @Column(name="future_intention")
     private String futureIntention;
