@@ -78,6 +78,12 @@
                 <div class="activity-color-tag"></div>
             </article>
         </div>
+        <tr th:each="activity : ${activitiesList}">
+            <td th:text="${activity.intention}"></td>
+            <td th:text="${activity.minutes}"></td>
+            <td th:text="${activity.seconds}"></td>
+        </tr>
+
     </aside>
 </main>
 <script type="text/javascript" th:src="@{/script/activity.js}" src="../static/script/activity.js"></script>

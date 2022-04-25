@@ -35,7 +35,7 @@ console.log(startActivityButton)
 timerButton.addEventListener('click', timerStart);
 newActivityButton.addEventListener('click', returnHome)
 
-window.onload = retrieveFromStorage();
+//window.onload = retrieveFromStorage();
 window.onload = displayPastActivities();
 
 function startActivity(event) {
@@ -140,7 +140,7 @@ function storeInformation() {
   if ((selectedCategory !== undefined) && (intentionInformation.value.length > 0) && (minutesNumberOnly.value.length > 0) && (secondsNumberOnly.value.length > 0)) {
     let activityInstance = new Activity (selectedCategory, intentionInformation.value.toUpperCase(), minutesNumberOnly.value, secondsNumberOnly.value, tagColor);
     activityInformation.unshift(activityInstance);
-    activityInformation[0].saveToStorage();
+//    activityInformation[0].saveToStorage();
   }
 };
 
@@ -209,9 +209,9 @@ function logActivity() {
   timerButton.disabled = false;
 };
 
-function retrieveFromStorage() {
-  activityInformation = JSON.parse(localStorage.getItem('activityInformation')) || [];
-};
+//function retrieveFromStorage() {
+//  activityInformation = JSON.parse(localStorage.getItem('activityInformation')) || [];
+//};
 
 function clearForm() {
   intentionInformation.value = '';

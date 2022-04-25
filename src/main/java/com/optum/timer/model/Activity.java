@@ -6,7 +6,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.*;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name="activities")
@@ -16,16 +18,17 @@ public class Activity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, targetEntity = Activity.class)
     @JoinTable(
             name = "user_activities",
             joinColumns = {@JoinColumn(name = "user_id")},
             inverseJoinColumns = {@JoinColumn(name = "activity_id")}
     )
-    private Collection<Activity> activity;
+    private Collection<Activity> activity = new HashSet<>();
 
-    @Column(name = "user_id")
-    private long userId;
+
+//    @Column(name = "user_id")
+//    private long userId;
 
     @Column(name = "intention")
     private String intention;
@@ -47,14 +50,14 @@ public class Activity {
     public void setId(long id) {
         this.id = id;
     }
-
-    public long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(long userId) {
-        this.userId = userId;
-    }
+//
+//    public long getUserId() {
+//        return userId;
+//    }
+//
+//    public void setUserId(long userId) {
+//        this.userId = userId;
+//    }
 
     public String getIntention() {
         return intention;
@@ -78,5 +81,16 @@ public class Activity {
 
     public void setSeconds(int seconds) {
         this.seconds = seconds;
+    }
+
+    @Override
+    public String toString() {
+        return "Activity{" +
+                "id=" + id +
+                ", activity=" + activity +
+                ", intention='" + intention + '\'' +
+                ", minutes=" + minutes +
+                ", seconds=" + seconds +
+                '}';
     }
 }

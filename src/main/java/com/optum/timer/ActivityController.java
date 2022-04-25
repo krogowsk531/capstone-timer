@@ -40,21 +40,29 @@ public class ActivityController {
     }
 
     @GetMapping("/addNewActivity")
-    public String addNewActivity(Model model) {
+    public String addNewActivity(Model model, Principal principal) {
+        User user = userRepository.findByEmail(principal.getName());
         Activity activity = new Activity();
-        model.addAttribute("activity", activity);
+        model.addAttribute("activity", activityService.getActivitiesById(user.getId()));
         return "index";
     }
 
+    @GetMapping("/timer")
+    public String showTimer() {
+        return "timer";
+    }
+
+
     @PostMapping("/addNewActivity")
-    public String saveNewActivity(@ModelAttribute("activity")Activity activity, Principal principal, Model model) {
+    public String saveNewActivity(@ModelAttribute("activity")Activity activity, Principal principal) {
         System.out.println("HERETOOO" + activity.getIntention());
         User user = userRepository.findByEmail(principal.getName());
+        System.out.println(user);
         activityService.save(activity);
         user.getActivities().add(activity);
         userDetails.saveUser(user);
-        model.addAttribute("activity", activity);
-        return "timer";
+//        model.addAttribute("activity", activity);
+        return "redirect:/";
     }
 
 //    @PostMapping(path="/add") // Map ONLY POST Requests
