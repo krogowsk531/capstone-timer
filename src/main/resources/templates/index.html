@@ -7,7 +7,17 @@
     <title>Intention Timer</title>
 </head>
 <body>
-<div th:replace="fragments/topnav :: navbar"></div>
+<!--<div th:replace="fragments/topnav :: navbar"></div>-->
+<div>
+    <header>
+        <h1 class="navbar-title">INTENTION TIMER</h1>
+        <div class="navbar-selections">
+            <a class="future-intentions-title" id="intentionsTitle" th:href="@{/comments}">Future Intentions</a></div>
+        <div class="navbar-selections">
+            <a class="invite-friends-title" th:href="@{/friends}">Invite Friends</a>
+        </div>
+    </header>
+</div>
 <main>
     <article class="activity-card-article">
         <h2>New Activity</h2>
