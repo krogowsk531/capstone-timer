@@ -615,6 +615,20 @@ input:focus {
     outline: none;
 }
 
+.to-timer-button {
+    background-color: #CFCAD8;
+    color: white;
+    width: 31.25em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    padding: 0.7em;
+    margin-left: 1.3em;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: bolder;
+}
+
 .update-comment-button {
     background-color: #CFCAD8;
         color: white;
@@ -796,10 +810,35 @@ invite-friend-button:hover {
   section {
     padding: 1em;
   }
+  .navbar-selections {
+    display: flex;
+  }
+  .activity-card {
+      background-color: #46424D;
+      border-radius: 0.5em;
+      box-shadow: 20px 20px 50px 10px #26222d;
+      height: 720px;
+      margin: 1em;
+      margin-bottom: 1.5em;
+      padding: 2em 2em 1em 2em;
+  }
   .icon {
     height: 30px;
     padding-right: 10px;
     width: 30px;
+  }
+  .to-timer-button {
+      background-color: #CFCAD8;
+      color: white;
+      width: 8.5em;
+      text-decoration: none;
+      text-transform: uppercase;
+      border: none;
+      padding: 0.7em;
+      margin-left: 4.2em;
+      text-align: center;
+      border-radius: 3px;
+      font-weight: bolder;
   }
   .activity-button {
     align-self: center;
