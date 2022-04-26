@@ -264,11 +264,16 @@ grid-area: 1 / 2 / 2 / 2;
     display: grid;
     font-size: 1.2em;
     text-decoration: none;
-    padding-bottom: 1em;
+    padding-bottom: .5em;
     padding-right: 0.5em;
     text-align: right;
     white-space: nowrap;
     width: 100%;
+}
+
+invite-friends-title:hover {
+    color: white;
+    text-decoration: none;
 }
 
 .navbar-selections {

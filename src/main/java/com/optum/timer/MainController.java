@@ -47,7 +47,8 @@ public class MainController {
     }
 
     @GetMapping("/timer")
-    public String showTimer() {
+    public String showTimer(Model model) {
+        Activity activity = new Activity();
         return "timer";
     }
 
