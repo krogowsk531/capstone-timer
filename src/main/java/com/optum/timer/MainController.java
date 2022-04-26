@@ -49,6 +49,7 @@ public class MainController {
     @GetMapping("/timer")
     public String showTimer(Model model) {
         Activity activity = new Activity();
+        model.addAttribute("displayTimer", activity);
         return "timer";
     }
 

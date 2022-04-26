@@ -25,6 +25,7 @@ let emailAnswer = document.querySelector('.email-answer');
 let passwordAnswer = document.querySelector('.password-answer');
 let newActivityButton = document.querySelector('.new-activity-button');
 let startActivityButton = document.querySelector('.start-activity-button')
+let toTimerButton = document.querySelector('.go-to-timer-button')
 let activityInformation = [];
 let selectedCategory;
 let tagColor;
@@ -32,17 +33,24 @@ let tagColor;
 activityButtonContainer.addEventListener('click', activityButton);
 console.log(startActivityButton)
 //startActivityButton.addEventListener('click', startActivity)
+//toTimerButton.addEventListener('click', toTimer)
 timerButton.addEventListener('click', timerStart);
-newActivityButton.addEventListener('click', returnHome)
+//newActivityButton.addEventListener('click', returnHome)
 
 //window.onload = retrieveFromStorage();
-window.onload = displayPastActivities();
+//window.onload = displayPastActivities();
+
+//function toTimer() {
+//     activityCard.classList.add('hide');
+//     timerCard.classList.remove('hide');
+//}
+
 
 function startActivity(event) {
 //  event.preventDefault();
-  storeInformation();
-
-  allowDisplayTimerCard();
+//  storeInformation();
+    activity.display();
+//  allowDisplayTimerCard();
   console.log("here")
   logActivityButton.disabled = true;
   return true;
@@ -122,12 +130,12 @@ function displayActivityCard(event) {
   pastActivitySection.classList.remove('hide');
 };
 
-function displayTimerCard() {
-  timerCard.classList.remove('hide');
-  activityCard.classList.add('hide');
-  let activity = activityInformation[0];
-  activity.display();
-};
+//function displayTimerCard() {
+//  timerCard.classList.remove('hide');
+//  activityCard.classList.add('hide');
+//  let activity = activityInformation[0];
+//  activity.display();
+//};
 
 function allowDisplayTimerCard() {
     console.log("HERE")
@@ -136,15 +144,14 @@ function allowDisplayTimerCard() {
   }
 };
 
-function storeInformation() {
-  if ((selectedCategory !== undefined) && (intentionInformation.value.length > 0) && (minutesNumberOnly.value.length > 0) && (secondsNumberOnly.value.length > 0)) {
-    let activityInstance = new Activity (selectedCategory, intentionInformation.value.toUpperCase(), minutesNumberOnly.value, secondsNumberOnly.value, tagColor);
-    activityInformation.unshift(activityInstance);
-//    activityInformation[0].saveToStorage();
-  }
-};
+//function storeInformation() {
+//  if ((selectedCategory !== undefined) && (intentionInformation.value.length > 0) && (minutesNumberOnly.value.length > 0) && (secondsNumberOnly.value.length > 0)) {
+//    let activityInstance = new Activity (selectedCategory, intentionInformation.value.toUpperCase(), minutesNumberOnly.value, secondsNumberOnly.value, tagColor);
+//    activityInformation.unshift(activityInstance);
+////    activityInformation[0].saveToStorage();
+//  }
+//};
 
-// return
 
 // userIntention.innerText = this.description;
 //     minutesText.innerText = this.minutes;
@@ -178,7 +185,7 @@ function timerComplete() {
 };
 
 function markComplete() {
-    secondsText.innerText = `0`;
+    secondsText.innerText = `00`;
     minutesText.innerText = `0`;
     timerButton.innerText = `FINISHED`;
  };
@@ -227,18 +234,18 @@ function clearLogin() {
   passwordAnswer.value = '';
 };
 
-function returnHome() {
-  completedActivity.classList.add('hide');
-  activityCard.classList.remove('hide');
-  pastActivitySection.classList.remove('hide');
-  timerButton.innerText = `START`;
-  clearForm();
-};
+//function returnHome() {
+//  completedActivity.classList.add('hide');
+//  activityCard.classList.remove('hide');
+//  pastActivitySection.classList.remove('hide');
+//  timerButton.innerText = `START`;
+//  clearForm();
+//};
 
-function logout() {
-  completedActivity.classList.add('hide');
-//  loginCard.classList.remove('hide');
-  pastActivitySection.classList('hide');
-  clearLogin();
-  clearForm();
-};
+//function logout() {
+//  completedActivity.classList.add('hide');
+////  loginCard.classList.remove('hide');
+//  pastActivitySection.classList('hide');
+//  clearLogin();
+//  clearForm();
+//};

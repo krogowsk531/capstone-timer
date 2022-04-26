@@ -10,23 +10,50 @@
 </head>
 
 <body>
-<div th:replace="fragments/topnav :: navbar">
-
-</div>
-<main>
-
-<article class="timer-card-article" >
-    <h2>Current Activity</h2>
-    <section class="timer-card">
-        <div class="user-input">
-            <h3 class="user-intention" th:text="${activity.intention}">Deep Breathing</h3>
-            <p class="timer-text"><span class="minutes-text" th:text="${activity.minutes}">05</span>:<span class="seconds-text" th:text="${activity.seconds}">00</span></p>
+<div>
+    <header style="margin: 0.5em;">
+        <h1 class="navbar-title">INTENTION TIMER</h1>
+        <div class="navbar-selections">
+            <a class="future-intentions-title" id="intentionsTitle" th:href="@{/}">Add Activity</a></div>
+        <div class="navbar-selections">
+            <a class="invite-friends-title" th:href="@{/friends}">Invite Friends</a>
         </div>
-        <button class="timer-button" onclick="timerStart()">START</button>
-        <a href="/" th:href="@{/navigate}">LOG ACTIVITY</a>
+        <div class="navbar-selections">
+            <a class="invite-friends-title" th:href="@{/comments}">Future Intentions</a>
+        </div>
+        <div class="navbar-selections">
+            <a class="invite-friends-title" th:href="@{/login}">Logout</a>
+        </div>
+    </header>
+</div>
 
-    </section>
-</article>
+<!--<article class="timer-card-article" >-->
+<!--    <h2>Current Activity</h2>-->
+<!--    <section class="timer-card">-->
+<!--        <div class="user-input">-->
+<!--            <h3 class="user-intention" th:text="${activity.intention}">Deep Breathing</h3>-->
+<!--            <p class="timer-text"><span class="minutes-text" th:text="${activity.minutes}">05</span>:<span class="seconds-text" th:text="${activity.seconds}">00</span></p>-->
+<!--        </div>-->
+<!--        <button class="timer-button" onclick="timerStart()">START</button>-->
+<!--        <a href="/" th:href="@{/navigate}">LOG ACTIVITY</a>-->
+
+<!--    </section>-->
+<!--</article>-->
+    <article class="timer-card-article" >
+        <h2>Current Activity</h2>
+        <section class="timer-card">
+            <div class="user-input">
+<!--                <h3 class="user-intention" th:text="${displayTimer.intention}"></h3>-->
+                <h3 class="user-intention">GO RUNNING</h3>
+<!--                <p class="timer-text"><span class="minutes-text" th:text="${activity.minutes}">05</span>:<span class="seconds-text" th:text="${activity.seconds}">00</span></p>-->
+                <p class="timer-text"><span class="minutes-text">0</span>:<span class="seconds-text">05</span></p>
+
+            </div>
+            <button class="timer-button" onclick="timerStart()">START</button>
+            <!--            <a href="/" th:href="@{/navigate}">LOG ACTIVITY</a>-->
+
+        </section>
+    </article>
 <article class="completed-activity hide">
     <h2>Completed Activity</h2>
     <section>
@@ -34,10 +61,6 @@
         <button class="logout-button">LOGOUT</button>
     </section>
 </article>
-    <div th:replace="fragments/activitiesaside :: pastactivities">
-
-    </div>
-</main>
     <script type="text/javascript" th:src="@{/script/activity.js}" src="../static/script/activity.js"></script>
     <script type="text/javascript" th:src="@{/script/main.js}" src="../static/script/main.js"></script>
 </body>

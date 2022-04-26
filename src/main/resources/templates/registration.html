@@ -9,8 +9,10 @@
     <title>Sign Up</title>
 </head>
 <body>
-<div th:replace="fragments/topnav :: navbar">
-
+<div>
+    <header>
+        <h1 class="navbar-title">INTENTION TIMER</h1>
+    </header>
 </div>
 <main>
     <article class="login-card-article">
@@ -76,7 +78,7 @@
                 <!--                </div>-->
                 <!--                <div class="form-group">-->
                 <button type="submit" class="login-button btn btn-success">Register</button>
-                <span>Already registered? <a href="/" th:href="@{/login}">Login Here</a></span>
+                <span>Already registered? <a href="/" th:href="@{/login}" class="login-here-button">Login Here</a></span>
                 <!--                </div>-->
 
             </form>

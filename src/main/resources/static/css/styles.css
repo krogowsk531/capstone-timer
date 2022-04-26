@@ -443,11 +443,14 @@ color: white;
 
 .timer-button {
   background-color: #46424D;
+  border: 2px solid #FD8078;
+  color: #FFF;
   border-radius: 50%;
   cursor: pointer;
   float: none;
   font-size: 25px;
   height: 200px;
+  margin-top: 3em;
   width: 200px;
 }
 
@@ -727,6 +730,13 @@ invite-friend-button:hover {
 }
 
 .register-here-button {
+    align-items: center;
+    color: white;
+    padding-left: 1.5em;
+    font-size: 1em;
+}
+
+.login-here-button {
     align-items: center;
     color: white;
     padding-left: 1.5em;
