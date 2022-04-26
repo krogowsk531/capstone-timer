@@ -47,11 +47,6 @@ public class ActivityController {
         return "index";
     }
 
-    @GetMapping("/timer")
-    public String showTimer() {
-        return "timer";
-    }
-
 
     @PostMapping("/addNewActivity")
     public String saveNewActivity(@ModelAttribute("activity")Activity activity, Principal principal) {

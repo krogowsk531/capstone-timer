@@ -46,6 +46,11 @@ public class MainController {
         return "login";
     }
 
+    @GetMapping("/timer")
+    public String showTimer() {
+        return "timer";
+    }
+
 //    @GetMapping("/logout")
 //    public String logout(HttpServletRequest request){
 //        HttpSession httpSession = request.getSession();
@@ -75,7 +80,6 @@ public class MainController {
     public String userIndex() {
         return "user/index";
     }
-
 }
 
 

@@ -374,12 +374,28 @@ color: #FFF;
 .past-activity-card {
   background-color: #46424D;
   border-radius: .5em;
-  display: grid;
   grid-template-columns: 98% 2%;
   margin: .2em 1em .2em 1em;
   overflow: auto;
   padding: 1em;
   white-space: nowrap;
+}
+
+.past-seconds {
+    border-bottom: 2px solid white;
+    padding-bottom: 1em;
+    color: white;
+}
+
+.past-minutes {
+    padding-bottom: .5em;
+    color: white;
+}
+
+.past-activity {
+color: white;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
 }
 
 .activity-color-tag {
@@ -530,7 +546,7 @@ align-content: center;
     height: 3.3em;
 }
 
-.add-friend-button {
+.add-friend-button, .add-comment-button {
 background-color: #CFCAD8;
     text-decoration: none;
     color: #FFF;
@@ -541,7 +557,30 @@ background-color: #CFCAD8;
     font-size: 1.2em;
 }
 
-.add-friend-button:hover {
+.update-comment-container {
+background-color: #46424D;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    height: 40em;
+}
+
+input:focus {
+    outline: none;
+}
+
+.update-future-comment {
+    margin-top: 1em;
+    margin-bottom: 0.7em;
+}
+
+.update-comment-text {
+    padding-right: 1em;
+    color: #FFF;
+    font-size: 1.7em;
+}
+
+.add-friend-button:hover, .add-comment-button:hover {
     color: white;
 }
 
@@ -566,6 +605,26 @@ background-color: #CFCAD8;
     color: white;
     border: none;
     outline: none;
+}
+
+.update-comment-button {
+    background-color: #CFCAD8;
+        color: white;
+        border: none;
+        outline: none;
+        margin-bottom: 0.5em;
+}
+
+.update-comment-button:hover, .delete-comment-button:hover {
+    color: white;
+}
+
+.delete-comment-button {
+background-color: #CFCAD8;
+        color: white;
+        border: none;
+        outline: none;
+        width: 53%;
 }
 
 .invite-friend-button {
