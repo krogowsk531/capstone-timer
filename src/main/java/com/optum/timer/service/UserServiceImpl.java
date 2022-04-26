@@ -7,7 +7,7 @@ import java.util.Collection;
 import java.util.stream.Collectors;
 
 
-import com.optum.timer.dto.UserRegistrationDto;
+import com.optum.timer.security.UserRegistrationDto;
 import com.optum.timer.model.Role;
 import com.optum.timer.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,6 @@ import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.optum.timer.model.User;
-import com.optum.timer.repository.UserRepository;
 
 @Service
 public class UserServiceImpl implements UserService {

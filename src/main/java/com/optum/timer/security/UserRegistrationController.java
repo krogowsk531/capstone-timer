@@ -1,8 +1,8 @@
-package com.optum.timer.controller;
+package com.optum.timer.security;
 
 import javax.validation.Valid;
 
-import com.optum.timer.dto.UserRegistrationDto;
+import com.optum.timer.security.UserRegistrationDto;
 import com.optum.timer.model.User;
 import com.optum.timer.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.optum.timer.validator;
+package com.optum.timer.security;
 
 import javax.validation.Payload;
 import javax.validation.Constraint;

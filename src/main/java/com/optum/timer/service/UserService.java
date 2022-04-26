@@ -2,7 +2,7 @@ package com.optum.timer.service;
 
 import java.util.List;
 
-import com.optum.timer.dto.UserRegistrationDto;
+import com.optum.timer.security.UserRegistrationDto;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 

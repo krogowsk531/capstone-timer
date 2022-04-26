@@ -1,4 +1,4 @@
-package com.optum.timer;
+package com.optum.timer.controller;
 
 //import com.optum.timer.model.Activity;
 //import com.optum.timer.service.ActivityService;

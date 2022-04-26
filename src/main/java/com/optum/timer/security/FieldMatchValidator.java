@@ -1,10 +1,10 @@
 
-package com.optum.timer.validator;
+package com.optum.timer.security;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import com.optum.timer.validator.FieldMatch;
+import com.optum.timer.security.FieldMatch;
 import org.apache.commons.beanutils.BeanUtils;
 
 public class FieldMatchValidator implements ConstraintValidator<FieldMatch, Object> {

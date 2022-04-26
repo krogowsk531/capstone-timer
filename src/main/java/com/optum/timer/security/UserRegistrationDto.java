@@ -1,6 +1,6 @@
-package com.optum.timer.dto;
+package com.optum.timer.security;
 
-import com.optum.timer.validator.FieldMatch;
+import com.optum.timer.security.FieldMatch;
 
 import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.Email;
