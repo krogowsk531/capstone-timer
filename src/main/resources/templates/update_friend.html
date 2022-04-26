@@ -11,27 +11,41 @@
 </head>
 
 <body style="background-color: #2B2733;">
-<div class="container">
+<section class="container my-2 update-comment-container" style="background-color: #46424D;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    height: 40em;
+    border-radius: 4px;">
   <hr>
-  <h2>Update Friend</h2>
+  <div style="padding-right: 1em;
+  color: #FFF;
+  font-size: 1.7em;">Update Friend</div>
 
   <form action="#" th:action="@{/saveFriend}" th:object="${friend}" method="POST">
 
     <!-- Add hidden form field to handle update -->
     <input type="hidden" th:field="*{id}" />
 
-    <input type="text" th:field="*{firstName}" class="form-control mb-4 col-4">
+    <input type="text" th:field="*{firstName}" class="form-control" style="margin-top: 1em;
+    margin-bottom: 0.5em; outline: none; border: none;">
 
-    <input type="text" th:field="*{lastName}" class="form-control mb-4 col-4">
+    <input type="text" th:field="*{lastName}" class="form-control" style="margin-top: 0.7em;
+    margin-bottom: 0.7em; outline: none; border: none;">
 
-    <input type="text" th:field="*{email}" class="form-control mb-4 col-4">
+    <input type="text" th:field="*{email}" class="form-control" style="margin-top: 0.7em;
+    margin-bottom: 2.2em;">
 
-    <button type="submit" class="btn btn-info col-2"> Update Friend</button>
+    <button type="submit" class="btn"style="background-color: #CFCAD8;
+    color: white;
+    text-transform: uppercase;
+    height: 3.1em; width: 100%"> Update Friend</button>
   </form>
 
   <hr>
 
-  <a th:href="@{/friends}"> Back to Friend List</a>
-</div>
+  <a th:href="@{/friends}" style="color: white;
+    text-decoration: underline;"> Back to Friend List</a>
+</section>
 </body>
 </html>
