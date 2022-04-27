@@ -20,7 +20,7 @@ https://docs.google.com/document/d/1EO4omeChI5H287vZLRaB20yGb_cq5SrEW6t4HvQKAac/
 
 ## DB Schema
 
-![image info]: https://github.com/krogowsk531/tek-java-course/Capstone-timer/src/main/resources/DatabaseSchema.png
+https://docs.google.com/document/d/e/2PACX-1vS_INS4U6SU875MkIy4tj_QGib9v8tUFD9Js4l0Q0agBm0hQCMjs2S2FKXiC0DlukfECiRkhit9uJAd/pub
 
 ## 04/11
 #### (20% Complete)
