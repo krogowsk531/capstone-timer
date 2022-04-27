@@ -1,57 +1,56 @@
 * {
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  max-width: 100%;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+      max-width: 100%;
 }
 body {
-  background-color: #2B2733;
-  min-width: 230px;
+      background-color: #2B2733;
+      min-width: 230px;
 }
 
 th {
-  color: #FFF;
+    color: #FFF;
 }
 
 td {
-  color: #FFF;
+    color: #FFF;
 }
 
 h3 {
-  color: #FFF;
-  font-size: 1.5em;
-  margin: 0;
-  overflow: auto;
-  white-space: nowrap;
-  width: 100%;
+      color: #FFF;
+      font-size: 1.5em;
+      margin: 0;
+      overflow: auto;
+      white-space: nowrap;
+      width: 100%;
 }
 
 #confirmEmail {
-  background-color: transparent;
-  border-style: none;
-  border-bottom: 2px solid #CBC9CF;
-  color: #CBC9CF;
-  font-size: 1.2em;
-  width: 23em;
-  margin-bottom: 1.4em;
+      background-color: transparent;
+      border-style: none;
+      border-bottom: 2px solid #CBC9CF;
+      color: #CBC9CF;
+      font-size: 1.2em;
+      width: 23em;
+      margin-bottom: 1.4em;
 }
 
 #confirmPassword {
-  background-color: transparent;
-  border-style: none;
-  border-bottom: 2px solid #CBC9CF;
-  color: #CBC9CF;
-  font-size: 1.2em;
-  width: 23em;
-  margin-bottom: 1.4em;
+      background-color: transparent;
+      border-style: none;
+      border-bottom: 2px solid #CBC9CF;
+      color: #CBC9CF;
+      font-size: 1.2em;
+      width: 23em;
+      margin-bottom: 1.4em;
 }
 
 #intentionsTitle {
-grid-area: 1 / 2 / 2 / 2;
-color: #FFF;
+    grid-area: 1 / 2 / 2 / 2;
+    color: #FFF;
     font-size: 1.2e,;
     margin: 0;
     display: grid;
-    /* display: flex; */
     font-size: 1.2em;
     text-decoration: none;
     padding-bottom: 0.5em;
@@ -62,75 +61,58 @@ color: #FFF;
     width: 100%;
 }
 
-
-/*a {
-  background-color: #CFCAD8;
-  color: white;
-  padding: 1em 1.5em;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 1.5em;
-  border-radius: 3px;
-}*/
-
 button {
-  box-shadow: none;
-  outline: none;
+    box-shadow: none;
+    outline: none;
 }
 
 .icon {
-  height: 30px;
-  width: 30px;
+    height: 30px;
+    width: 30px;
 }
 
 header {
-  background-color: #46424D;
-  width: 100%;
-  border-radius: 4px;
+    background-color: #46424D;
+    width: 100%;
+    border-radius: 4px;
 }
 
 h1 {
-  color: #FFF;
-  font-size: 1.2em;
-  letter-spacing: 1px;
-  margin: 0;
-  padding: .8em;
-  text-align: center;
+    color: #FFF;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: .8em;
+    text-align: center;
 }
 
 h2 {
-  color: #CBC9CF;
-  margin-left: 1em;
+    color: #CBC9CF;
+    margin-left: 1em;
 }
 
 section {
-  background-color: #46424D;
-  border-radius: .5em;
-  box-shadow: 20px 20px 50px 10px #26222D;
-  height: 640px;
-  margin: 1em;
-  margin-bottom: 1.5em;
-  padding: 2em 2em 1em 2em;
+      background-color: #46424D;
+      border-radius: .5em;
+      box-shadow: 20px 20px 50px 10px #26222D;
+      height: 640px;
+      margin: 1em;
+      margin-bottom: 1.5em;
+      padding: 2em 2em 1em 2em;
 }
 
-/* .card-text {
-  color: #FFF;
-  padding-right: 1em;
-} */
-
 .activity-button {
-  align-items: center;
-  background-color: transparent;
-  border: 1px solid #FFF;
-  border-radius: .2em;
-  color: #FFF;
-  display: flex;
-  flex-direction: column;
-  font-size: 16px;
-  height: 80px;
-  justify-content: center;
-  width: 150px;
+      align-items: center;
+      background-color: transparent;
+      border: 1px solid #FFF;
+      border-radius: .2em;
+      color: #FFF;
+      display: flex;
+      flex-direction: column;
+      font-size: 16px;
+      height: 80px;
+      justify-content: center;
+      width: 150px;
 }
 
 .navbar-title {
@@ -143,42 +125,42 @@ section {
 }
 
 input {
-  box-shadow: none;
-  outline: none;
+      box-shadow: none;
+      outline: none;
 }
 
 .green {
-  border: 2px solid #B3FD78;
-  color: #B3FD78;
+      border: 2px solid #B3FD78;
+      color: #B3FD78;
 }
 
 .purple {
-  border: 2px solid #C278FD;
-  color: #C278FD;
+      border: 2px solid #C278FD;
+      color: #C278FD;
 }
 
 .red {
-  border: 2px solid #FD8078;
-  color: #FD8078;
+      border: 2px solid #FD8078;
+      color: #FD8078;
 }
 
 .red-circle {
-  border: 2px solid #FD8078;
-  color: #FFF;
+      border: 2px solid #FD8078;
+      color: #FFF;
 }
 
 div {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  grid-gap: 1em;
-  grid-template-rows: repeat(auto-fit, minmax(10px, 1fr));
-  justify-content: center;
-  justify-content: space-between;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      grid-gap: 1em;
+      grid-template-rows: repeat(auto-fit, minmax(10px, 1fr));
+      justify-content: center;
+      justify-content: space-between;
 }
 
 form {
-  color: #CBC9CF;
+      color: #CBC9CF;
       flex-direction: column;
       display: flex;
       margin: 10px;
@@ -186,56 +168,55 @@ form {
 }
 
 .alert-icon {
-  height: 12px;
-  margin: 2px 5px 5px 3px;
-  width: 12px;
+      height: 12px;
+      margin: 2px 5px 5px 3px;
+      width: 12px;
 }
 
 .alert-unselected-activity{
- color: #EFB7EC;
- text-align: center;
+     color: #EFB7EC;
+     text-align: center;
 }
 
 .alert-empty-text {
-  color: #EFB7EC;
-  display: flex;
-  font-size: 13px;
-  grid-area: 4 / 1 / 5 / 3;
-  width: 200px;
+      color: #EFB7EC;
+      display: flex;
+      font-size: 13px;
+      grid-area: 4 / 1 / 5 / 3;
+      width: 200px;
 }
 
 .alert-text-2{
-  font-size: 13px;
-  grid-area: 7 / 1 / 8 / 2;
-  padding-left: 20px;
+      font-size: 13px;
+      grid-area: 7 / 1 / 8 / 2;
+      padding-left: 20px;
 }
 
 .alert-text-3{
-  font-size: 13px;
-  grid-area: 7 / 2 / 8 / 3;
-  padding-left: 20px;
+      font-size: 13px;
+      grid-area: 7 / 2 / 8 / 3;
+      padding-left: 20px;
 }
 
 .alert-empty-minutes{
-  align-self: start;
-  grid-area: 7 / 1 / 8 / 2;
-  justify-self: start;
+      align-self: start;
+      grid-area: 7 / 1 / 8 / 2;
+      justify-self: start;
 }
 
 .alert-empty-seconds{
-  align-self: start;
-  grid-area: 7 / 2 / 8 / 3;
-  justify-self: start;
+      align-self: start;
+      grid-area: 7 / 2 / 8 / 3;
+      justify-self: start;
 }
 
 .future-intentions-title {
-grid-area: 1 / 2 / 2 / 2;
-color: #FFF;
+    grid-area: 1 / 2 / 2 / 2;
+    color: #FFF;
     font-size: 1.2e,;
     margin: 0;
     font-size: 1.2em;
     padding-bottom: 0.5em;
-    /* padding-left: 0.5em; */
     padding-right: 0.5em;
     text-align: right;
     white-space: nowrap;
@@ -243,7 +224,7 @@ color: #FFF;
 }
 
 .friends-list-text, .save-friend-text {
-padding-right: 1em;
+    padding-right: 1em;
     color: #FFF;
     font-size: 1.7em;
 }
@@ -251,13 +232,13 @@ padding-right: 1em;
 .friends-list-container, .add-friend-container {
    background-color: #46424D;
    display: grid;
- align-content: center;
- justify-content: center;
- height: 40em;
+   align-content: center;
+   justify-content: center;
+   height: 40em;
 }
 
 .invite-friends-title {
-grid-area: 1 / 2 / 2 / 2;
+    grid-area: 1 / 2 / 2 / 2;
     color: #FFF;
     font-size: 1.2e,;
     margin: 0;
@@ -271,7 +252,7 @@ grid-area: 1 / 2 / 2 / 2;
     width: 100%;
 }
 
-invite-friends-title:hover {
+.invite-friends-title:hover {
     color: white;
     text-decoration: none;
 }
@@ -307,7 +288,8 @@ invite-friends-title:hover {
 
 .start-activity-button {
   background-color: #CFCAD8;
-  color: white;
+  color: black;
+  font-weight: bold;
   padding: 1em 1.5em;
   text-decoration: none;
   text-transform: uppercase;
@@ -316,7 +298,7 @@ invite-friends-title:hover {
   margin: 1.5em;
   border-radius: 3px;
   font-weight: bolder;
-   width: 37.5em;
+  width: 37.5em;
   grid-area: 8 / 2 / 9 / 3;
 }
 
@@ -544,7 +526,7 @@ align-content: center;
 }
 
 .back-to-friends:hover {
-    color: white;
+    color: black;
 }
 
 .save-friend-button {
@@ -557,9 +539,10 @@ align-content: center;
 }
 
 .add-friend-button, .add-comment-button {
-background-color: #CFCAD8;
+    background-color: #CFCAD8;
     text-decoration: none;
-    color: #FFF;
+    color: black;
+    font-weight: bold;
     outline: none;
     margin-top: 3em;
     border: none;
@@ -591,7 +574,7 @@ input:focus {
 }
 
 .add-friend-button:hover, .add-comment-button:hover {
-    color: white;
+    color: black;
 }
 
 .login-button {
@@ -612,14 +595,16 @@ input:focus {
 
 .update-friend-button, .delete-friend-button{
     background-color: #CFCAD8;
-    color: white;
+    color: black;
+    font-weight: bold;
     border: none;
     outline: none;
 }
 
 .to-timer-button {
     background-color: #CFCAD8;
-    color: white;
+    color: black;
+    font-weight: bold;
     width: 31.25em;
     text-decoration: none;
     text-transform: uppercase;
@@ -633,41 +618,44 @@ input:focus {
 
 .update-comment-button {
     background-color: #CFCAD8;
-        color: white;
-        border: none;
-        outline: none;
-        margin-bottom: 0.5em;
+    color: black;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin-bottom: 0.5em;
 }
 
 .update-comment-button:hover, .delete-comment-button:hover {
-    color: white;
+    color: black;
 }
 
 .delete-comment-button {
-background-color: #CFCAD8;
-        color: white;
-        border: none;
-        outline: none;
-        width: 53%;
+    background-color: #CFCAD8;
+    color: black;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    width: 53%;
 }
 
 .invite-friend-button {
     background-color: #CFCAD8;
-    color: white;
+    color: black;
+    font-weight: bold;
     border: none;
     outline: none;
 }
 
 invite-friend-button:hover {
-    color: white;
+    color: black;
 }
 
 .update-friend-button:hover {
-    color: white;
+    color: black;
 }
 
 .delete-friend-button:hover {
-    color: white;
+    color: black;
 }
 
 .login-card-article {
@@ -694,7 +682,7 @@ invite-friend-button:hover {
   align-content: center;
   justify-content: center;
   height: 40em;
-  }
+ }
 
 .ham-icon {
   padding: .3em;
@@ -718,11 +706,6 @@ invite-friend-button:hover {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
-/*.sign-in-area {
-  background: #76727E;
-  border-radius: 0.5em;
-}*/
 
 .sign-in-text {
   color: #FFF;

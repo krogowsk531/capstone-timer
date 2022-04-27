@@ -19,68 +19,22 @@
         <section class="register-card">
             <div class="sign-in-area">
                 <p style="font-size: 1.5em;" class="card-text sign-in-text">Sign Up</p>
-<!--                <p style="font-size: 1.5em;" class="card-text login-text">Login</p>-->
-                <!-- <p style="font-size: 1.5em;">Login</p> -->
-
             </div>
             <form th:action="@{/registration}" th:object="${user}" method="post">
-<!--                <p class="error-message" th:if="${#fields.hasGlobalErrors()}"-->
-<!--                   th:each="error : ${#fields.errors('global')}" th:text="${error}">Validation-->
-<!--                    error</p>-->
-                <!--                <div class="form-group"-->
-                <!--                     th:classappend="${#fields.hasErrors('firstName')}? 'has-error':''">-->
                 <label for="firstName" class="first-name control-label">First Name</label>
                 <input class="first-answer input form-control" id="firstName" type="text" th:field="*{firstName}" />
-                <!--                    <p class="error-message"-->
-                <!--                       th:each="error: ${#fields.errors('firstName')}"-->
-                <!--                       th:text="${error}">Validation error</p>-->
-                <!--                </div>-->
-                <!--                <div class="form-group"-->
-                <!--                     th:classappend="${#fields.hasErrors('lastName')}? 'has-error':''">-->
                 <label for="lastName" class="first-name control-label">Last Name</label>
                 <input type="text" id="lastName" class="last-answer input form-control" th:field="*{lastName}" />
-<!--                <p class="error-message"&ndash;&gt;-->
-                    <!--                       th:each="error : ${#fields.errors('lastName')}"-->
-                    <!--                       th:text="${error}">Validation error</p>-->
-                    <!--                </div>-->
-                    <!--                <div class="form-group"-->
-                    <!--                     th:classappend="${#fields.hasErrors('email')}? 'has-error':''">-->
-
                 <label for="email" class="login-email control-label">Email</label>
                 <input type="text" id="email" class="email-answer input form-control" th:field="*{email}" />
-                <!--                    <p class="error-message"-->
-                <!--                       th:each="error : ${#fields.errors('email')}" th:text="${error}">Validation-->
-                <!--                        error</p>-->
-                <!--                </div>-->
-                <!--                <div class="form-group"-->
-                <!--                     th:classappend="${#fields.hasErrors('confirmEmail')}? 'has-error':''">-->
                 <label for="confirmEmail" class="control-label">Confirm Email</label>
                 <input id="confirmEmail" class="form-control" th:field="*{confirmEmail}" />
-                <!--                    <p class="error-message"-->
-                <!--                       th:each="error : ${#fields.errors('confirmEmail')}"-->
-                <!--                       th:text="${error}">Validation error</p>-->
-                <!--                </div>-->
-                <!--                <div class="form-group"-->
-                <!--                     th:classappend="${#fields.hasErrors('password')}? 'has-error':''">-->
                 <label for="password" class="login-password control-label">Password</label>
                 <input id="password" class="password-answer input form-control" type="password" th:field="*{password}" />
-                <!--                    <p class="error-message"-->
-                <!--                       th:each="error : ${#fields.errors('password')}"-->
-                <!--                       th:text="${error}">Validation error</p>-->
-                <!--                </div>-->
-                <!--                <div class="form-group"-->
-                <!--                     th:classappend="${#fields.hasErrors('confirmPassword')}? 'has-error':''">-->
                 <label for="confirmPassword" class="control-label">Confirm Password</label>
                 <input id="confirmPassword" class="form-control" type="password" th:field="*{confirmPassword}" />
-                <!--                    <p class="error-message"-->
-                <!--                       th:each="error : ${#fields.errors('confirmPassword')}"-->
-                <!--                       th:text="${error}">Validation error</p>-->
-                <!--                </div>-->
-                <!--                <div class="form-group">-->
                 <button type="submit" class="login-button btn btn-success">Register</button>
                 <span>Already registered? <a href="/" th:href="@{/login}" class="login-here-button">Login Here</a></span>
-                <!--                </div>-->
-
             </form>
         </section>
     </article>
@@ -89,56 +43,3 @@
     <script type="text/javascript" th:src="@{/script/main.js}" src="../static/script/main.js"></script>
 </body>
 </html>
-
-
-<!--<nav class="navbar navbar-inverse navbar-fixed-top">-->
-<!--    <div class="container">-->
-<!--        <div class="navbar-header">-->
-<!--            <button type="button" class="navbar-toggle collapsed"-->
-<!--                    data-toggle="collapse" data-target="#navbar" aria-expanded="false"-->
-<!--                    aria-controls="navbar">-->
-<!--                <span class="sr-only">Toggle navigation</span> <span-->
-<!--                    class="icon-bar"></span> <span class="icon-bar"></span> <span-->
-<!--                    class="icon-bar"></span>-->
-<!--            </button>-->
-<!--            <a class="navbar-brand" href="#" th:href="@{/}">Registration and-->
-<!--                Login Module</a>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</nav>-->
-
-
-<!--            <div th:if="${param.success}">-->
-<!--                <div class="alert alert-info">You've successfully registered-->
-<!--                    to our awesome app!</div>-->
-<!--            </div>-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--            </form>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
-<!--<script type="text/javascript"-->
-<!--        th:src="@{/webjars/jquery/3.2.1/jquery.min.js/}"></script>-->
-<!--<script type="text/javascript"-->
-<!--        th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>-->
-<!--</body>-->
-<!--</html>-->
-

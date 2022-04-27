@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 
 import com.optum.timer.model.User;
 
-//@Qualifier("users")
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
     User findByEmail(String email);

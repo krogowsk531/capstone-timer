@@ -1,11 +1,6 @@
 package com.optum.timer.service;
 
 import com.optum.timer.model.Activity;
-
-import java.util.List;
-
-import com.optum.timer.model.Activity;
-
 import java.util.List;
 import java.util.Set;
 
@@ -20,8 +15,4 @@ public interface ActivityService {
     void delete(long id);
 
     Set<Activity> getActivitiesById(long id);
-
-//    Activity getActivityById(long activityId);
-
-//    void delete(long activityId);
 }

@@ -7,8 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name="activities")
@@ -25,10 +23,6 @@ public class Activity {
             inverseJoinColumns = {@JoinColumn(name = "activity_id")}
     )
     private Collection<Activity> activity = new HashSet<>();
-
-
-//    @Column(name = "user_id")
-//    private long userId;
 
     @Column(name = "intention")
     private String intention;
@@ -50,14 +44,6 @@ public class Activity {
     public void setId(long id) {
         this.id = id;
     }
-//
-//    public long getUserId() {
-//        return userId;
-//    }
-//
-//    public void setUserId(long userId) {
-//        this.userId = userId;
-//    }
 
     public String getIntention() {
         return intention;

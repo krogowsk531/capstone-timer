@@ -7,20 +7,19 @@
     <title>Intention Timer</title>
 </head>
 <body>
-<!--<div th:replace="fragments/topnav :: navbar"></div>-->
-<div>
-    <header>
-        <h1 class="navbar-title">INTENTION TIMER</h1>
-        <div class="navbar-selections">
-            <a class="future-intentions-title" id="intentionsTitle" th:href="@{/comments}">Future Intentions</a></div>
-        <div class="navbar-selections">
-            <a class="invite-friends-title" th:href="@{/friends}">Invite Friends</a>
-        </div>
-        <div class="navbar-selections">
-            <a class="invite-friends-title" th:href="@{/login}">Logout</a>
-        </div>
-    </header>
-</div>
+    <div>
+        <header>
+            <h1 class="navbar-title">INTENTION TIMER</h1>
+            <div class="navbar-selections">
+                <a class="future-intentions-title" id="intentionsTitle" th:href="@{/comments}">Future Intentions</a></div>
+            <div class="navbar-selections">
+                <a class="invite-friends-title" th:href="@{/friends}">Invite Friends</a>
+            </div>
+            <div class="navbar-selections">
+                <a class="invite-friends-title" th:href="@{/login}">Logout</a>
+            </div>
+        </header>
+    </div>
 <main>
     <article class="activity-card-article">
         <h2>New Activity</h2>
@@ -50,15 +49,12 @@
             <input th:field="*{minutes}" id="minutes" maxlength="2" class="minutes-input input" type="text">
             <label class="seconds">Seconds</label>
             <input th:field="*{seconds}" id="seconds" maxlength="2" class="seconds-input input" type="text" >
-<!--            <button class="start-activity-button" onclick="displayTimerCard()">TO TIMER</button>-->
             <div>
             <button class="start-activity-button" type="submit" >LOG ACTIVITY</button>
             </div>
             <div>
                 <a th:href="@{/timer}" class="to-timer-button">TO TIMER</a>
             </div>
-
-<!--            <button class="go-to-timer-button">TO TIMER</button>-->
         </form>
         </section>
     </article>
@@ -70,33 +66,17 @@
                 <p class="timer-text"><span class="minutes-text" th:text="${activity.minutes}">05</span>:<span class="seconds-text" th:text="${activity.seconds}">00</span></p>
             </div>
             <button class="timer-button" onclick="timerStart()">START</button>
-<!--            <a href="/" th:href="@{/navigate}">LOG ACTIVITY</a>-->
-
         </section>
     </article>
-
-<!--    <article class="timer-card-article hide">-->
-<!--        <h2>Current Activity</h2>-->
-<!--        <section class="timer-card">-->
-<!--            <div class="user-input">-->
-<!--                <h3 class="user-intention">Deep Breathing</h3>-->
-<!--                <p class="timer-text"><span class="minutes-text">05</span>:<span class="seconds-text">00</span></p>-->
-<!--            </div>-->
-<!--            <button class="timer-button">START</button>-->
-<!--            <button class="log-activity-button" onClick="logActivity()">LOG ACTIVITY</button>-->
-<!--        </section>-->
-<!--    </article>-->
     <article class="completed-activity hide">
         <h2>Completed Activity</h2>
         <section>
             <button class="new-activity-button">CREATE A NEW ACTIVITY</button>
-<!--            <button class="logout-button" onClick="logout()">LOGOUT</button>-->
             <a class="logout-button" href="/" th:href="@{/login}">LOGOUT</a>
         </section>
     </article>
     <aside class="past-activity-article">
         <h2>Past Activities</h2>
-<!--        <p class="no-activities-message">You haven't logged any activities yet.  Complete the form to the left to get started!</p>-->
         <div class="card-container">
             <article class="past-activity-card">
                 <tr th:each="activity : ${activitiesList}">
@@ -109,19 +89,13 @@
                     <div class="past-seconds">
                         <td th:text="${activity.seconds}"></td>  SECS
                     </div>
-
-
                 </tr>
-<!--                <div class="activity-color-tag"></div>-->
             </article>
-
         </div>
-
-
     </aside>
 </main>
-<script type="text/javascript" th:src="@{/script/activity.js}" src="../static/script/activity.js"></script>
-<script type="text/javascript" th:src="@{/script/main.js}" src="../static/script/main.js"></script>
+    <script type="text/javascript" th:src="@{/script/activity.js}" src="../static/script/activity.js"></script>
+    <script type="text/javascript" th:src="@{/script/main.js}" src="../static/script/main.js"></script>
 </body>
 </html>
 

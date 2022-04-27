@@ -7,50 +7,46 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
 </head>
 <body style="background-color: #2B2733;">
-<div>
-    <header style="margin: 0.5em;">
-        <h1 class="navbar-title">INTENTION TIMER</h1>
-        <div class="navbar-selections">
-            <a class="future-intentions-title" id="intentionsTitle" th:href="@{/}">Add Activity</a></div>
-        <div class="navbar-selections">
-            <a class="invite-friends-title" th:href="@{/comments}">Future Intentions</a>
-        </div>
-        <div class="navbar-selections">
-            <a class="invite-friends-title" th:href="@{/login}">Logout</a>
-        </div>
-    </header>
-</div>
-
-<section class="container my-2 friends-list-container">
-    <div class="friends-list-text">Friends List</div>
-
-    <a th:href="@{/showAddFriendForm}" class="btn btn-sm mb-3 add-friend-button"> Add Friend </a>
-
-    <table class="table table-striped table-responsive-md">
-        <thead>
-        <tr>
-            <th>Friend First Name</th>
-            <th>Friend Last Name</th>
-            <th>Friend Email</th>
-            <th> Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="friend : ${listFriends}">
-            <td th:text="${friend.firstName}"></td>
-            <td th:text="${friend.lastName}"></td>
-            <td th:text="${friend.email}"></td>
-            <td><a th:href="@{/showUpdateFriendForm/{id}(id=${friend.id})}" class="btn update-friend-button">Update</a>
-                <a th:href="@{/deleteFriend/{id}(id=${friend.id})}" class="btn delete-friend-button">Delete</a>
-                <button class="btn invite-friend-button">Invite</button>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</section>
+    <div>
+        <header style="margin: 0.5em;">
+            <h1 class="navbar-title">INTENTION TIMER</h1>
+            <div class="navbar-selections">
+                <a class="future-intentions-title" id="intentionsTitle" th:href="@{/}">Add Activity</a></div>
+            <div class="navbar-selections">
+                <a class="invite-friends-title" th:href="@{/comments}">Future Intentions</a>
+            </div>
+            <div class="navbar-selections">
+                <a class="invite-friends-title" th:href="@{/login}">Logout</a>
+            </div>
+        </header>
+    </div>
+    <section class="container my-2 friends-list-container">
+        <div class="friends-list-text">Friends List</div>
+        <a th:href="@{/showAddFriendForm}" class="btn btn-sm mb-3 add-friend-button"> Add Friend </a>
+        <table class="table table-striped table-responsive-md">
+            <thead>
+            <tr>
+                <th>Friend First Name</th>
+                <th>Friend Last Name</th>
+                <th>Friend Email</th>
+                <th> Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="friend : ${listFriends}">
+                <td th:text="${friend.firstName}"></td>
+                <td th:text="${friend.lastName}"></td>
+                <td th:text="${friend.email}"></td>
+                <td><a th:href="@{/showUpdateFriendForm/{id}(id=${friend.id})}" class="btn update-friend-button">Update</a>
+                    <a th:href="@{/deleteFriend/{id}(id=${friend.id})}" class="btn delete-friend-button">Delete</a>
+                    <button class="btn invite-friend-button">Invite</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
 </body>
 </html>
 </html>

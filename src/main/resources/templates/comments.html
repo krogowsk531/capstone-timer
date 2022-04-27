@@ -9,49 +9,41 @@
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 </head>
-
 <body style="background-color: #2B2733;">
-<div>
-    <header style="margin: 0.5em;">
-        <h1 class="navbar-title">INTENTION TIMER</h1>
-        <div class="navbar-selections">
-            <a class="future-intentions-title" id="intentionsTitle" th:href="@{/}">Add Activity</a></div>
-        <div class="navbar-selections">
-            <a class="invite-friends-title" th:href="@{/friends}">Invite Friends</a>
-        </div>
-        <div class="navbar-selections">
-            <a class="invite-friends-title" th:href="@{/login}">Logout</a>
-        </div>
-    </header>
-</div>
-
-<section class="container my-2 add-friend-container">
-    <div class="friends-list-text">Future Intentions List</div>
-
-    <a th:href="@{/showNewCommentForm}" class="btn btn-sm mb-3 add-comment-button"> Add Intention </a>
-
-    <table class="table table-striped table-responsive-md">
-        <thead>
-        <tr>
-            <th>Future Intention</th>
-            <th>Description</th>
-            <th> Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="comment : ${listComments}">
-            <td th:text="${comment.futureIntention}"></td>
-            <td th:text="${comment.description}"></td>
-            <td><a th:href="@{/showFormForUpdate/{id}(id=${comment.id})}" class="btn update-comment-button">Update</a>
-                <a th:href="@{/deleteComment/{id}(id=${comment.id})}" class="btn delete-comment-button">Delete</a>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</section>
-
-<!--<div class="container my-2">-->
-<!--    <a th:href="@{/logout}" class="btn btn-primary btn-sm mb-3"> Log out </a>-->
-<!--</div>-->
+    <div>
+        <header style="margin: 0.5em;">
+            <h1 class="navbar-title">INTENTION TIMER</h1>
+            <div class="navbar-selections">
+                <a class="future-intentions-title" id="intentionsTitle" th:href="@{/}">Add Activity</a></div>
+            <div class="navbar-selections">
+                <a class="invite-friends-title" th:href="@{/friends}">Invite Friends</a>
+            </div>
+            <div class="navbar-selections">
+                <a class="invite-friends-title" th:href="@{/login}">Logout</a>
+            </div>
+        </header>
+    </div>
+    <section class="container my-2 add-friend-container">
+        <div class="friends-list-text">Future Intentions List</div>
+        <a th:href="@{/showNewCommentForm}" class="btn btn-sm mb-3 add-comment-button"> Add Intention </a>
+        <table class="table table-striped table-responsive-md">
+            <thead>
+            <tr>
+                <th>Future Intention</th>
+                <th>Description</th>
+                <th> Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="comment : ${listComments}">
+                <td th:text="${comment.futureIntention}"></td>
+                <td th:text="${comment.description}"></td>
+                <td><a th:href="@{/showFormForUpdate/{id}(id=${comment.id})}" class="btn update-comment-button">Update</a>
+                    <a th:href="@{/deleteComment/{id}(id=${comment.id})}" class="btn delete-comment-button">Delete</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
 </body>
 </html>

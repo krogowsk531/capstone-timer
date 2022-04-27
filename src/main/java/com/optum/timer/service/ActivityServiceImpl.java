@@ -1,11 +1,9 @@
 package com.optum.timer.service;
 
 import com.optum.timer.model.Activity;
-import com.optum.timer.model.User;
 import com.optum.timer.repository.ActivityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Set;
 
@@ -29,11 +27,6 @@ public class ActivityServiceImpl implements ActivityService {
         return activityRepository.findAll();
     }
 
-//    @Override
-//    public List<Activity> listAll() {
-//        return null;
-//    }
-
     @Override
     public void save(Activity activity) {
         System.out.println("here");
@@ -54,24 +47,4 @@ public class ActivityServiceImpl implements ActivityService {
     public Set<Activity> getActivitiesById(long id) {
         return userService.getUserById(id).getActivities();
     }
-
-//    @Override
-//    public Activity get(Integer activityId) {
-//        return null;
-//    }
-
-//    @Override
-//    public void delete(Integer activityId) {
-//
-//    }
-
-//    @Override
-//    public Activity getActivityById(long activityId) {
-//        return activityRepository.getById(activityId);
-//    }
-
-//    @Override
-//    public void delete(long activityId) {
-//        activityRepository.deleteById(activityId);
-//    }
 }

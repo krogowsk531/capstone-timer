@@ -32,25 +32,10 @@ let tagColor;
 
 activityButtonContainer.addEventListener('click', activityButton);
 console.log(startActivityButton)
-//startActivityButton.addEventListener('click', startActivity)
-//toTimerButton.addEventListener('click', toTimer)
 timerButton.addEventListener('click', timerStart);
-//newActivityButton.addEventListener('click', returnHome)
-
-//window.onload = retrieveFromStorage();
-//window.onload = displayPastActivities();
-
-//function toTimer() {
-//     activityCard.classList.add('hide');
-//     timerCard.classList.remove('hide');
-//}
-
 
 function startActivity(event) {
-//  event.preventDefault();
-//  storeInformation();
-    activity.display();
-//  allowDisplayTimerCard();
+  activity.display();
   console.log("here")
   logActivityButton.disabled = true;
   return true;
@@ -130,34 +115,12 @@ function displayActivityCard(event) {
   pastActivitySection.classList.remove('hide');
 };
 
-//function displayTimerCard() {
-//  timerCard.classList.remove('hide');
-//  activityCard.classList.add('hide');
-//  let activity = activityInformation[0];
-//  activity.display();
-//};
-
 function allowDisplayTimerCard() {
     console.log("HERE")
   if ((selectedCategory !== undefined) && (intentionInformation.value.length > 0) && (minutesNumberOnly.value.length > 0) && (secondsNumberOnly.value.length > 0)) {
     displayTimerCard();
   }
 };
-
-//function storeInformation() {
-//  if ((selectedCategory !== undefined) && (intentionInformation.value.length > 0) && (minutesNumberOnly.value.length > 0) && (secondsNumberOnly.value.length > 0)) {
-//    let activityInstance = new Activity (selectedCategory, intentionInformation.value.toUpperCase(), minutesNumberOnly.value, secondsNumberOnly.value, tagColor);
-//    activityInformation.unshift(activityInstance);
-////    activityInformation[0].saveToStorage();
-//  }
-//};
-
-
-// userIntention.innerText = this.description;
-//     minutesText.innerText = this.minutes;
-//     secondsText.innerText = this.seconds;
-//     if (secondsText.innerText < 10) {
-//       secondsText.innerText = ('0' + secondsText.innerText);
 
 function timerStart() {
   let intentionTimer = setInterval(timerCountdown, 1000);
@@ -216,10 +179,6 @@ function logActivity() {
   timerButton.disabled = false;
 };
 
-//function retrieveFromStorage() {
-//  activityInformation = JSON.parse(localStorage.getItem('activityInformation')) || [];
-//};
-
 function clearForm() {
   intentionInformation.value = '';
   minutesNumberOnly.value = '';
@@ -233,19 +192,3 @@ function clearLogin() {
   emailAnswer.value = '';
   passwordAnswer.value = '';
 };
-
-//function returnHome() {
-//  completedActivity.classList.add('hide');
-//  activityCard.classList.remove('hide');
-//  pastActivitySection.classList.remove('hide');
-//  timerButton.innerText = `START`;
-//  clearForm();
-//};
-
-//function logout() {
-//  completedActivity.classList.add('hide');
-////  loginCard.classList.remove('hide');
-//  pastActivitySection.classList('hide');
-//  clearLogin();
-//  clearForm();
-//};

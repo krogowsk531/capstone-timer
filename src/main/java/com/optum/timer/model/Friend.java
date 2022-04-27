@@ -1,7 +1,6 @@
 package com.optum.timer.model;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.util.Collection;
 import java.util.Objects;
 

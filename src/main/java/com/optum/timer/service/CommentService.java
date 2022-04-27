@@ -1,7 +1,6 @@
 package com.optum.timer.service;
 
 import com.optum.timer.model.Comment;
-
 import java.util.List;
 
 public interface CommentService {
