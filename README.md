@@ -18,7 +18,7 @@ Contact Sang Shin to access this document:
 
 https://docs.google.com/document/d/1EO4omeChI5H287vZLRaB20yGb_cq5SrEW6t4HvQKAac/edit
 
-##DB Schema
+## DB Schema
 
 ![image info](/Users/katystsauveur/tek-java-course/Capstone-timer/src/main/resources/static/img/DatabaseSchema.png)
 
