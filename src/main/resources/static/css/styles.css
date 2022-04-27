@@ -316,6 +316,7 @@ invite-friends-title:hover {
   margin: 1.5em;
   border-radius: 3px;
   font-weight: bolder;
+   width: 37.5em;
   grid-area: 8 / 2 / 9 / 3;
 }
 
@@ -547,8 +548,9 @@ align-content: center;
 }
 
 .save-friend-button {
+    color: black;
+    font-weight: bold;
     background-color: #CFCAD8;
-    color: white;
     outline: none;
     margin-top: 1.8em;
     height: 3.3em;
