@@ -18,9 +18,30 @@ Contact Sang Shin to access this document:
 
 https://docs.google.com/document/d/1EO4omeChI5H287vZLRaB20yGb_cq5SrEW6t4HvQKAac/edit
 
+## Technical Architecture 
+
+https://docs.google.com/document/d/15Z9YyKh6DHmRGslP6ZrKTd1-3WVQ-N_GnqRlv39k4T8/edit?usp=sharing
+
 ## DB Schema
 
 https://docs.google.com/document/d/e/2PACX-1vS_INS4U6SU875MkIy4tj_QGib9v8tUFD9Js4l0Q0agBm0hQCMjs2S2FKXiC0DlukfECiRkhit9uJAd/pub
+
+## Technical Challenges
+
+* Learning and incorporating Java, SpringBoot (JPA and Security), Thymeleaf
+* Refactoring front end heavy project to full stack
+* Understanding the Spring Boot may create tables that you are unaware of
+
+## Lessons Learned 
+
+* Became a better problem solver
+* Enjoy testing with Spring Boot
+* Embrace bootstrap for styling where appropriate
+
+## Future Iterations Include
+
+* Inviting friends to join via email
+* Implementing timer bell when time is complete
 
 ## 04/11
 #### (20% Complete)
